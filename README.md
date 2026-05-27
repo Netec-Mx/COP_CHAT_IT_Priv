@@ -1,12 +1,16 @@
+<img src="images/neteclogo (2).png" alt="logo" width="300"/>
+
 # Copilot chat en IT
+
+## Plataforma de laboratorios
+
+Te damos la bienvenida a la **plataforma de laboratorios** del curso **Copilot chat en IT**. Aquí podrás explorar diferentes tecnologías a través de prácticas guiadas. ¡Desarrolla tus habilidades y lleva tus conocimientos al siguiente nivel!
 
 Este programa proporciona un marco integral para la adopción de IA en departamentos de tecnología. Abarca desde la planificación estratégica de proyectos con alcances realistas hasta la optimización técnica del ciclo de vida de desarrollo, pruebas y soporte. Se enfoca en cómo Copilot y otros modelos de lenguaje pueden automatizar tareas críticas de documentación, scripts y gestión de servicios (ITSM), mejorando la eficiencia operativa y la calidad del servicio técnico.
 
-## Estructura
-
-- `CapituloXX/README.md`: guía de laboratorio por capítulo.
-
 ## Lista de laboratorios
+
+Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia práctica. Haz clic en los enlaces para comenzar.
 
 ### Capítulo 1
 
@@ -32,8 +36,12 @@ Este programa proporciona un marco integral para la adopción de IA en departame
   - Descripción: Actividad práctica guiada basada estrictamente en el contenido del módulo.
   - Duración estimada: 60 min
 
-## Flujo de colaboración
 
-- Trabajar en `changes_course`.
-- Crear Pull Request hacia `main`.
-- Merge por `Squash and merge`.
+## 📬 **Contacto y más información**
+
+
+Si tienes alguna pregunta o necesitas más detalles, no dudes en [contactarnos](mailto:soporte@netec.com). También puedes encontrar más recursos en nuestra [página](https://netec.com).
+
+---
+
+¡Gracias por visitar nuestra plataforma! No olvides revisar todos los laboratorios y comenzar tu viaje de aprendizaje hoy mismo.
