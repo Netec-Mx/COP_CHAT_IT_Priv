@@ -219,7 +219,7 @@ Responde en español con formato de lista numerada.
 
 1. En Copilot Chat, escribe el siguiente prompt incluyendo el código problemático:
 
-```
+````text
 Actúa como un experto en seguridad y revisión de código PowerShell con conocimiento de CIS Controls y mejores prácticas de scripting.
 Revisa el siguiente script de PowerShell e identifica TODOS los problemas que encuentres, clasificándolos en estas categorías:
 - 🔴 CRÍTICO: Vulnerabilidades de seguridad o errores que causan fallos
@@ -234,32 +234,31 @@ Para cada problema encontrado, indica:
 
 Aquí está el script a revisar:
 
-```powershell
-# Script de gestión de usuarios - v1.0
-$password = "Admin123!"
-$users = Get-Content "C:\users.txt"
+    # Script de gestión de usuarios - v1.0
+    $password = "Admin123!"
+    $users = Get-Content "C:\users.txt"
 
-foreach($u in $users){
-    $secPass = $password
-    New-LocalUser -Name $u -Password $secPass -FullName $u
-    Add-LocalGroupMember -Group "Administrators" -Member $u
-    Write-Host "User $u created"
-}
+    foreach($u in $users){
+        $secPass = $password
+        New-LocalUser -Name $u -Password $secPass -FullName $u
+        Add-LocalGroupMember -Group "Administrators" -Member $u
+        Write-Host "User $u created"
+    }
 
-function Check-Admin {
-    $result = Invoke-Expression $args[0]
-    return $result
-}
+    function Check-Admin {
+        $result = Invoke-Expression $args[0]
+        return $result
+    }
 
-$logFile = "C:\log.txt"
-Add-Content $logFile "Script executed at $(Get-Date)"
+    $logFile = "C:\log.txt"
+    Add-Content $logFile "Script executed at $(Get-Date)"
 
-if($users.Count = 0){
-    Write-Host "No users found"
-}
-```
+    if($users.Count = 0){
+        Write-Host "No users found"
+    }
 
 Responde en español con el análisis completo y luego proporciona el script completo corregido.
+
 ```
 
 > **Nota:** El bloque de código del script problemático debe ser pegado directamente en el chat. En la práctica, el triple backtick cierra el bloque de código del prompt; escribe el prompt y el código como un solo mensaje en Copilot Chat.
