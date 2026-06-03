@@ -217,7 +217,6 @@ Responde en español con formato de lista numerada.
 
 **Instrucciones:**
 
-````markdown
 1. En Copilot Chat, escribe el siguiente prompt incluyendo el código problemático:
 
 ````text
@@ -235,34 +234,33 @@ Para cada problema encontrado, indica:
 
 Aquí está el script a revisar:
 
-    # Script de gestión de usuarios - v1.0
-    $password = "Admin123!"
-    $users = Get-Content "C:\users.txt"
+```powershell
+# Script de gestión de usuarios - v1.0
+$password = "Admin123!"
+$users = Get-Content "C:\users.txt"
 
-    foreach($u in $users){
-        $secPass = $password
-        New-LocalUser -Name $u -Password $secPass -FullName $u
-        Add-LocalGroupMember -Group "Administrators" -Member $u
-        Write-Host "User $u created"
-    }
+foreach($u in $users){
+    $secPass = $password
+    New-LocalUser -Name $u -Password $secPass -FullName $u
+    Add-LocalGroupMember -Group "Administrators" -Member $u
+    Write-Host "User $u created"
+}
 
-    function Check-Admin {
-        $result = Invoke-Expression $args[0]
-        return $result
-    }
+function Check-Admin {
+    $result = Invoke-Expression $args[0]
+    return $result
+}
 
-    $logFile = "C:\log.txt"
-    Add-Content $logFile "Script executed at $(Get-Date)"
+$logFile = "C:\log.txt"
+Add-Content $logFile "Script executed at $(Get-Date)"
 
-    if($users.Count = 0){
-        Write-Host "No users found"
-    }
+if($users.Count = 0){
+    Write-Host "No users found"
+}
 
 Responde en español con el análisis completo y luego proporciona el script completo corregido.
 
-```
-
-> **Nota:** El bloque de código del script problemático debe ser pegado directamente en el chat. En la práctica, el triple backtick cierra el bloque de código del prompt; escribe el prompt y el código como un solo mensaje en Copilot Chat.
+> **Nota:** El bloque de código del script problemático debe ser pegado directamente en el chat. En la práctica, las marcas de código cierran el bloque; escribe el prompt y el código como un solo mensaje en Copilot Chat.
 
 2. Revisa el análisis de Copilot. Verifica que haya identificado al menos los siguientes problemas intencionales:
    - Contraseña en texto plano (`$password = "Admin123!"`)
@@ -273,7 +271,7 @@ Responde en español con el análisis completo y luego proporciona el script com
 
 3. Si Copilot no identificó alguno de estos problemas, usa el siguiente follow-up prompt:
 
-```
+```text
 Gracias por el análisis. Noto que no mencionaste [el problema específico que falta]. ¿Puedes revisar específicamente esa línea y explicar el riesgo de seguridad asociado según las mejores prácticas de OWASP o CIS Controls?
 ```
 
@@ -281,8 +279,7 @@ Gracias por el análisis. Noto que no mencionaste [el problema específico que f
 
 **Salida esperada:** Un análisis estructurado con al menos 5 problemas identificados (mínimo 2 críticos de seguridad), explicaciones de impacto y un script corregido que use `ConvertTo-SecureString`, elimine `Invoke-Expression`, use `-eq` para comparación y no asigne automáticamente el rol de Administrador.
 
-
-
+---
 
 #### Paso 2.2 — Revisar un script Python con errores lógicos y de rendimiento
 
@@ -290,55 +287,57 @@ Gracias por el análisis. Noto que no mencionaste [el problema específico que f
 
 **Instrucciones:**
 
-````markdown
 1. En Copilot Chat, escribe el siguiente prompt con el código problemático:
 
 ````text
 Actúa como un revisor de código Python senior con experiencia en optimización de rendimiento y buenas prácticas PEP 8.
-Analiza el siguiente script Python que procesa archivos de log de un servidor web.
+Analiza el siguiente script Python que procesa archivos de log de un servidor web. Identifica todos los problemas y clasifícalos igual que antes (🔴 CRÍTICO, 🟡 ADVERTENCIA, 🟢 SUGERENCIA).
+
+Para cada problema, explica: qué está mal, cuál es el impacto en rendimiento o seguridad, y cómo corregirlo.
 
 Script a revisar:
 
-    import os
-    import json
+```python
+import os
+import json
 
-    def process_logs(log_file):
-        errors = []
-        warnings = []
-        data = open(log_file).read()
-        lines = data.split('\n')
+def process_logs(log_file):
+    errors = []
+    warnings = []
+    data = open(log_file).read()
+    lines = data.split('\n')
+    
+    for i in range(0, len(lines)):
+        line = lines[i]
+        if 'ERROR' in line:
+            errors.append(line)
+        if 'WARNING' in line:
+            warnings.append(line)
+    
+    result = {}
+    result['errors'] = errors
+    result['warnings'] = warnings
+    result['total'] = len(errors) + len(warnings)
+    
+    output_file = open('output.json', 'w')
+    json.dump(result, output_file)
+    
+    return result
 
-        for i in range(0, len(lines)):
-            line = lines[i]
-            if 'ERROR' in line:
-                errors.append(line)
-            if 'WARNING' in line:
-                warnings.append(line)
+def get_critical_errors(log_file):
+    all_errors = []
+    data = open(log_file).read()
+    for line in data.split('\n'):
+        if 'ERROR' in line:
+            all_errors.append(line)
+    return all_errors
 
-        result = {}
-        result['errors'] = errors
-        result['warnings'] = warnings
-        result['total'] = len(errors) + len(warnings)
-
-        output_file = open('output.json', 'w')
-        json.dump(result, output_file)
-
-        return result
-
-    def get_critical_errors(log_file):
-        all_errors = []
-        data = open(log_file).read()
-        for line in data.split('\n'):
-            if 'ERROR' in line:
-                all_errors.append(line)
-        return all_errors
-
-    logs_dir = '/var/logs'
-    for f in os.listdir(logs_dir):
-        process_logs(logs_dir + '/' + f)
-
-Explica problemas y refactoriza.
+logs_dir = '/var/logs'
+for f in os.listdir(logs_dir):
+    process_logs(logs_dir + '/' + f)
 ```
+
+Al final, proporciona el script completo refactorizado siguiendo PEP 8 y buenas prácticas. Responde en español.
 
 2. Verifica que Copilot haya identificado al menos los siguientes problemas intencionales:
    - Archivo abierto sin `with` statement (recurso no liberado correctamente)
