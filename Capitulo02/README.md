@@ -58,16 +58,6 @@ Al finalizar este laboratorio, el participante será capaz de:
 
 ## 5. Entorno de Laboratorio
 
-### Hardware mínimo recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
-| RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 500 MB | 2 GB |
-| Resolución de pantalla | 1280 × 768 | 1920 × 1080 |
-| Conexión a Internet | 10 Mbps | 25 Mbps |
-
 ### Configuración inicial del entorno
 
 Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
