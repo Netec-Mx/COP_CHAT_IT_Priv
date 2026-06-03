@@ -111,8 +111,6 @@ El laboratorio se divide en **cuatro escenarios** encadenados. Cada escenario co
 
 **Objetivo del escenario:** Usar Copilot Chat con técnicas de prompt engineering para generar scripts funcionales de automatización de IT en PowerShell y Python, aplicando el patrón de prompts iterativos aprendido en la lección 2.1.
 
-**Tiempo estimado:** 20 minutos
-
 ---
 
 #### Paso 1.1 — Generar un script PowerShell de verificación de servicios críticos
@@ -216,8 +214,6 @@ Responde en español con formato de lista numerada.
 ### Escenario 2: Revisión de Código Asistida por Copilot
 
 **Objetivo del escenario:** Analizar fragmentos de código con errores intencionales (bugs lógicos, vulnerabilidades de seguridad y malas prácticas) usando Copilot Chat para obtener un diagnóstico detallado y versiones corregidas.
-
-**Tiempo estimado:** 20 minutos
 
 ---
 
