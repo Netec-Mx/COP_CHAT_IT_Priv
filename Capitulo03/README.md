@@ -62,16 +62,6 @@ Al completar este laboratorio, serás capaz de:
 
 ## 5. Entorno de Laboratorio
 
-### Hardware Mínimo Recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 (64 bits) | Intel Core i7 / AMD Ryzen 7 |
-| RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 500 MB | 2 GB |
-| Resolución de pantalla | 1280 × 768 | 1920 × 1080 |
-| Conexión a Internet | 10 Mbps estable | 25 Mbps o superior |
-
 ### Software Requerido
 
 | Aplicación | Versión mínima | Uso en este laboratorio |
@@ -101,7 +91,7 @@ El laboratorio se divide en **cuatro bloques** progresivos. Cada bloque construy
 
 ---
 
-### BLOQUE 1 — Clasificación Automática de Tickets (25 minutos)
+### BLOQUE 1 — Clasificación Automática de Tickets
 
 #### Objetivo del Bloque
 Alimentar a Copilot Chat con el dataset simulado de tickets y construir prompts para que los clasifique automáticamente por categoría, severidad y área responsable. Documentar los resultados en Excel.
@@ -154,10 +144,6 @@ Responde siempre en español.
 
 **Resultado Esperado:**
 Copilot debe confirmar que ha recibido los 20 tickets y listar sus IDs (TKT-001 al TKT-020), posiblemente con un breve resumen del contexto.
-
-**Verificación:**
-✅ Copilot lista los 20 IDs de tickets sin omitir ninguno.
-✅ La respuesta está en español.
 
 ---
 
@@ -212,11 +198,6 @@ Presenta la tabla completa con los 20 tickets. Responde siempre en español.
 **Resultado Esperado:**
 Una tabla Markdown con los 20 tickets clasificados, incluyendo categoría, severidad, impacto y área responsable con justificación para cada uno.
 
-**Verificación:**
-✅ Los 20 tickets aparecen en la tabla.
-✅ Tickets como TKT-002 (SAP ERP - facturación), TKT-004 (Wi-Fi - 45 usuarios), TKT-014 (Firewall - seguridad) y TKT-018 (sitio web caído) reciben severidad **Crítico** o **Alto**.
-✅ TKT-011 y TKT-017 están clasificados en la categoría **Seguridad**.
-
 ---
 
 #### Paso 1.3 — Documentar la Clasificación en Excel
@@ -242,14 +223,9 @@ Una tabla Markdown con los 20 tickets clasificados, incluyendo categoría, sever
 **Resultado Esperado:**
 Una tabla Excel con 20 filas de datos, formateada con colores por severidad, lista para usar como base de priorización.
 
-**Verificación:**
-✅ La tabla tiene exactamente 20 filas de datos (sin contar encabezado).
-✅ Los tickets Críticos están destacados en rojo.
-✅ El archivo está guardado en OneDrive.
-
 ---
 
-### BLOQUE 2 — Priorización Inteligente de la Cola de Tickets (15 minutos)
+### BLOQUE 2 — Priorización Inteligente de la Cola de Tickets 
 
 #### Objetivo del Bloque
 Usar los tickets clasificados para que Copilot genere una cola de atención priorizada con justificación basada en SLAs e impacto en negocio.
@@ -294,11 +270,6 @@ Responde siempre en español.
 **Resultado Esperado:**
 Una tabla con los 20 tickets ordenados por prioridad (posiciones 1–20), con SLAs asignados y justificación. Seguida de un párrafo de análisis ejecutivo.
 
-**Verificación:**
-✅ Los primeros 5 puestos corresponden a tickets de severidad Crítica (TKT-002, TKT-004, TKT-018, TKT-014, TKT-009 o similar).
-✅ Cada fila incluye justificación de por qué ese ticket ocupa esa posición.
-✅ El análisis ejecutivo identifica patrones (por ejemplo: concentración de incidentes de red y seguridad).
-
 ---
 
 #### Paso 2.2 — Agregar la Cola Priorizada a Excel
@@ -316,10 +287,6 @@ Una tabla con los 20 tickets ordenados por prioridad (posiciones 1–20), con SL
 
 **Resultado Esperado:**
 Excel con dos hojas: `Hoja1` (clasificación) y `Cola_Priorizada` (ranking de atención con estado).
-
-**Verificación:**
-✅ La hoja `Cola_Priorizada` tiene 20 filas ordenadas por prioridad.
-✅ La columna `Estado` existe con valor "Pendiente" en todas las filas.
 
 ---
 
@@ -373,10 +340,6 @@ iniciar el análisis RCA. Responde siempre en español.
 
 **Resultado Esperado:**
 Copilot confirma haber recibido el contexto del incidente INC-2024-0847 y expresa que está listo para iniciar el RCA.
-
-**Verificación:**
-✅ Copilot menciona los elementos clave del incidente (847 usuarios, 3h44min, AD DS).
-✅ La respuesta está en español.
 
 ---
 
@@ -435,12 +398,6 @@ Responde siempre en español.
 **Resultado Esperado:**
 Un análisis de 5 Porqués completo que identifique como causa raíz algo relacionado con: falta de proceso de prueba post-cambio, gestión de cambios deficiente, o ausencia de validación de replicación de AD tras la actualización de Windows Server.
 
-**Verificación:**
-✅ El análisis tiene exactamente 5 niveles de "¿Por qué?".
-✅ Cada nivel incluye evidencia del contexto proporcionado.
-✅ La causa raíz está claramente declarada como una falla de proceso (no solo técnica).
-✅ Las causas contribuyentes incluyen al menos: monitoreo tardío y personal reducido.
-
 ---
 
 #### Paso 3.3 — Generar el Análisis de Ishikawa (Espina de Pescado)
@@ -478,11 +435,6 @@ Responde siempre en español.
 
 **Resultado Esperado:**
 Una tabla con las 6 categorías de Ishikawa, cada una con 2–4 causas identificadas, y una columna que indica si cada causa está directamente relacionada con la causa raíz o es contribuyente.
-
-**Verificación:**
-✅ Las 6 categorías están presentes.
-✅ La categoría "Procesos" incluye referencias a gestión de cambios y pruebas post-actualización.
-✅ La categoría "Medición" incluye el retraso de 23 minutos en la alerta de monitoreo.
 
 ---
 
@@ -534,15 +486,9 @@ Responde siempre en español.
 **Resultado Esperado:**
 Un documento Word con 5 de las 6 secciones completas, dejando la Sección 6 (Plan CAPA) para el Bloque 4.
 
-**Verificación:**
-✅ El documento tiene las 6 secciones estructuradas (aunque la Sección 6 esté vacía).
-✅ La línea de tiempo tiene al menos 8 eventos.
-✅ Los hallazgos principales son específicos y accionables.
-✅ El documento está guardado en OneDrive.
-
 ---
 
-### BLOQUE 4 — Plan de Prevención de Incidentes (CAPA) (20 minutos)
+### BLOQUE 4 — Plan de Prevención de Incidentes (CAPA) 
 
 #### Objetivo del Bloque
 Generar con Copilot un plan CAPA completo basado en los hallazgos del RCA, con acciones correctivas, preventivas, responsables, fechas y KPIs de seguimiento.
@@ -583,10 +529,6 @@ Responde siempre en español.
 **Resultado Esperado:**
 Una tabla con 5–7 acciones correctivas, cada una con ID, descripción, responsable, fecha y criterio de éxito.
 
-**Verificación:**
-✅ Las acciones abordan directamente las causas del RCA (gestión de cambios, pruebas post-actualización, monitoreo).
-✅ Los criterios de éxito son medibles (porcentajes, tiempos, conteos).
-
 ---
 
 #### Paso 4.2 — Generar las Acciones Preventivas (Preventive Actions)
@@ -622,11 +564,6 @@ Responde siempre en español.
 
 **Resultado Esperado:**
 Una tabla con 6–8 acciones preventivas con KPIs medibles distribuidas en los tres horizontes temporales.
-
-**Verificación:**
-✅ Hay al menos una acción preventiva de corto, medio y largo plazo.
-✅ Los KPIs son específicos (ej: "MTTR < 2 horas", "100% de cambios con prueba en staging").
-✅ Las acciones son sistémicas (no solo técnicas).
 
 ---
 
@@ -666,11 +603,6 @@ Responde siempre en español.
 
 **Resultado Esperado:**
 Un dashboard estructurado con KPIs operativos en tabla (con baseline y objetivos), KPIs de implementación CAPA e indicadores de alerta temprana.
-
-**Verificación:**
-✅ Los KPIs operativos incluyen MTTD, MTTR y disponibilidad del servicio de autenticación.
-✅ Los valores objetivo son realistas y mejoran respecto al baseline del incidente.
-✅ Los indicadores de alerta temprana son monitoreables semanalmente.
 
 ---
 
@@ -715,11 +647,6 @@ Máximo 150 palabras. Responde siempre en español.
 **Resultado Esperado:**
 Un documento Word completo con 7 secciones: Resumen Ejecutivo, Línea de Tiempo, Análisis 5 Porqués, Ishikawa, Hallazgos, Plan CAPA (con 3 sub-secciones) y Firmas.
 
-**Verificación:**
-✅ El documento tiene las 7 secciones completas.
-✅ La Sección 6 contiene las tablas de acciones correctivas, preventivas y el dashboard de KPIs.
-✅ El documento está guardado en OneDrive y es legible y profesional.
-
 ---
 
 #### Paso 4.5 — Crear el Tablero CAPA en Excel
@@ -745,125 +672,9 @@ ID Acción | Tipo (CA/PA) | Descripción | Causa que Atiende | Responsable | Fec
 **Resultado Esperado:**
 Una hoja Excel con el tablero completo del Plan CAPA, lista para ser usada como herramienta de seguimiento operativo.
 
-**Verificación:**
-✅ Todas las acciones CA y PA están registradas en la tabla.
-✅ La tabla de KPIs está presente con baseline y objetivos.
-✅ El archivo tiene 3 hojas: clasificación, cola priorizada y Plan CAPA.
-
 ---
 
-## 7. Validación y Pruebas
-
-Al finalizar el laboratorio, verifica que has producido los siguientes artefactos de calidad:
-
-### Lista de Verificación Final
-
-| Artefacto | Criterio de Calidad | ¿Completado? |
-|---|---|---|
-| **Excel - Hoja 1: Clasificación** | 20 tickets clasificados con categoría, severidad, impacto y área responsable | ☐ |
-| **Excel - Hoja 2: Cola_Priorizada** | 20 tickets ordenados por prioridad con SLAs y justificación | ☐ |
-| **Excel - Hoja 3: Plan_CAPA** | Todas las acciones CA y PA con estado inicial y KPIs | ☐ |
-| **Word - Sección 1: Resumen Ejecutivo** | Descripción, impacto, causa raíz y estado de resolución presentes | ☐ |
-| **Word - Sección 2: Línea de Tiempo** | Al menos 8 eventos desde 07:58 hasta 11:42 | ☐ |
-| **Word - Sección 3: Análisis 5 Porqués** | 5 niveles completos con evidencia y causa raíz declarada | ☐ |
-| **Word - Sección 4: Ishikawa** | 6 categorías con 2–4 causas cada una en formato tabla | ☐ |
-| **Word - Sección 5: Hallazgos** | 5 hallazgos específicos y accionables | ☐ |
-| **Word - Sección 6: Plan CAPA** | Acciones correctivas, preventivas y dashboard de KPIs | ☐ |
-| **Word - Sección 7: Firmas** | Tabla de aprobaciones presente | ☐ |
-
-### Prueba de Calidad del Proceso de Prompt Engineering
-
-Responde estas preguntas para validar tu aprendizaje del proceso:
-
-1. ¿Cuántas iteraciones de prompt necesitaste para obtener la clasificación de los 20 tickets con la calidad deseada?
-2. ¿En qué momento del RCA el análisis de Copilot te pareció más superficial y cómo lo refinaste?
-3. ¿Las acciones preventivas generadas por Copilot son sistémicas o solo técnicas? ¿Cómo las mejorarías?
-
-> 💡 **Reflexión final:** El primer resultado de Copilot es siempre un punto de partida. La calidad del artefacto final depende de tu capacidad para refinar el prompt con contexto adicional, criterios específicos y solicitudes de profundización. Esto es la esencia del prompt engineering avanzado.
-
----
-
-## 8. Solución de Problemas
-
-### Problema 1: Copilot no clasifica todos los tickets o corta la tabla a la mitad
-
-**Síntomas:**
-- La tabla de clasificación del Paso 1.2 aparece incompleta (por ejemplo, solo muestra 12 de 20 tickets).
-- Copilot indica que la respuesta es muy larga y la trunca.
-- Al solicitar la continuación, Copilot repite tickets ya clasificados o pierde el hilo.
-
-**Causa:**
-Los modelos de lenguaje tienen un límite en la longitud de las respuestas generadas en una sola salida. Cuando el dataset y las instrucciones son extensos, Copilot puede truncar la tabla para mantenerse dentro de sus límites de tokens de salida.
-
-**Solución:**
-1. Divide la clasificación en dos lotes. Envía un primer prompt solicitando solo los tickets TKT-001 al TKT-010:
-   ```
-   Clasifica únicamente los tickets del TKT-001 al TKT-010 con la misma 
-   estructura de tabla que definimos. Responde siempre en español.
-   ```
-2. Una vez recibida y copiada la primera tabla, envía un segundo prompt:
-   ```
-   Ahora clasifica los tickets del TKT-011 al TKT-020 con la misma 
-   estructura de tabla. Responde siempre en español.
-   ```
-3. Combina ambas tablas manualmente en Excel.
-4. Alternativamente, usa el prompt de refinamiento: `Continúa la tabla desde el TKT-[último número recibido + 1]. No repitas los tickets ya clasificados.`
-
----
-
-### Problema 2: El análisis de los 5 Porqués es genérico y no usa el contexto técnico del incidente
-
-**Síntomas:**
-- Los "¿Por qué?" de Copilot son respuestas genéricas de ITSM (ej: "falta de documentación", "proceso no definido") sin referencias específicas al incidente INC-2024-0847.
-- No hay menciones a la actualización KB5034441, la GPO modificada el viernes, o el retraso de 23 minutos del monitoreo.
-- El análisis parece aplicable a cualquier incidente, no al específico del laboratorio.
-
-**Causa:**
-Copilot puede haber "olvidado" el contexto técnico del incidente si la conversación es larga, o el prompt de los 5 Porqués no fue suficientemente explícito en requerir el uso del contexto proporcionado. Los modelos de lenguaje priorizan patrones generales cuando el contexto no se refuerza explícitamente.
-
-**Solución:**
-1. Envía un prompt de refinamiento que fuerce el uso del contexto específico:
-   ```
-   El análisis anterior es demasiado genérico. Necesito que el análisis de los 
-   5 Porqués sea ESPECÍFICO para el incidente INC-2024-0847. 
-   
-   Obligatoriamente debes referenciar en el análisis:
-   - La actualización de Windows Server KB5034441 aplicada la semana anterior
-   - La modificación de la GPO de contraseñas el viernes anterior
-   - El retraso de 23 minutos del sistema de monitoreo para generar alertas
-   - La reducción de personal (2 de 5 ingenieros en vacaciones)
-   
-   Regenera el análisis completo de los 5 Porqués incorporando estos 
-   elementos específicos como evidencia. Responde siempre en español.
-   ```
-2. Si el problema persiste, inicia una nueva conversación y re-proporciona el contexto del incidente (Paso 3.1) antes de solicitar el análisis de los 5 Porqués, para que el contexto esté fresco en la ventana de conversación.
-3. Usa el patrón de prompt: `Basándote EXCLUSIVAMENTE en los datos técnicos que te proporcioné sobre el incidente INC-2024-0847...` para anclar la respuesta al contexto específico.
-
----
-
-## 9. Limpieza del Entorno
-
-Al finalizar el laboratorio, realiza los siguientes pasos de limpieza:
-
-1. **Guardar artefactos finales:**
-   - Verifica que `Lab03-Tickets-Clasificacion.xlsx` esté guardado en OneDrive con las 3 hojas completas.
-   - Verifica que `Lab03-RCA-PlanCAPA.docx` esté guardado en OneDrive con las 7 secciones completas.
-   - Toma capturas de pantalla de los artefactos más importantes como respaldo adicional.
-
-2. **Organizar archivos en OneDrive:**
-   - Crea una carpeta en OneDrive llamada `Laboratorios-Copilot/Lab03` y mueve ambos archivos a esa carpeta.
-
-3. **Cerrar conversaciones de Copilot:**
-   - Recuerda que Copilot Chat **no guarda el historial de conversaciones de forma permanente**. Todo el contenido útil ya debe estar copiado en tus documentos de Word y Excel.
-   - Puedes cerrar las pestañas de Copilot Chat.
-
-4. **No es necesario eliminar archivos de OneDrive** — los artefactos generados son el producto del laboratorio y serán utilizados como referencia en laboratorios posteriores.
-
-> ⚠️ **Recordatorio de privacidad:** Confirma que ninguno de los documentos generados contiene datos reales de tu organización (credenciales, datos de clientes, información financiera real). Todos los datos usados deben ser los ficticios proporcionados en este laboratorio.
-
----
-
-## 10. Resumen
+## 7. Resumen
 
 ### Lo que Construiste en este Laboratorio
 
@@ -902,5 +713,3 @@ Este laboratorio integra directamente los conceptos de:
 | Framework CAPA — ISO 9001 | Referencia a la norma ISO 9001:2015, cláusula 10.2 |
 
 ---
-
-> 📌 **Próximo Laboratorio:** Lab 03-00-02 — Generación automatizada de runbooks y scripts de remediación con Copilot para los incidentes identificados en este laboratorio.
