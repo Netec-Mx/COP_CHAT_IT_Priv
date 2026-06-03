@@ -59,16 +59,6 @@ Al finalizar este laboratorio, el participant será capaz de:
 
 ## 5. Entorno de Laboratorio
 
-### Hardware mínimo recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
-| RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 500 MB | 2 GB |
-| Resolución de pantalla | 1280 × 768 | 1920 × 1080 |
-| Conexión a Internet | 10 Mbps | 25 Mbps |
-
 ### Configuración inicial del entorno
 
 Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
@@ -161,14 +151,6 @@ El script generado es un buen punto de partida. Por favor, mejóralo con los sig
 
 **Salida esperada:** Un script PowerShell de aproximadamente 50–80 líneas con funciones definidas, manejo de errores `try/catch`, parámetros de entrada, generación de archivo `.txt` y alertas de consola con `Write-Host -ForegroundColor Red`.
 
-**Verificación:**
-
-* [ ] El script contiene al menos una función definida con `function`.
-* [ ] Existe un bloque `try { } catch { }` para manejo de errores.
-* [ ] El script acepta un parámetro de entrada (`param`).
-* [ ] Hay comentarios explicativos en al menos 5 secciones del código.
-* [ ] El script genera un archivo de reporte con nombre dinámico que incluye la fecha.
-
 ---
 
 #### Paso 1.2 — Generar un script Python de pruebas de conectividad
@@ -208,14 +190,6 @@ Excelente. Ahora mejora el script con estas adiciones orientadas a pipelines CI/
 
 **Salida esperada:** Un script Python de aproximadamente 80–120 líneas con `argparse`, manejo de sockets TCP, generación de JSON, logging estructurado, docstrings en cada función y exit codes para integración con pipelines.
 
-**Verificación:**
-
-* [ ] El script usa únicamente librerías de la biblioteca estándar de Python.
-* [ ] Todas las funciones tienen docstrings.
-* [ ] Existe manejo de excepciones (`try/except`) para errores de conexión.
-* [ ] El script incluye el argumento `--fail-threshold` con lógica de exit code 1.
-* [ ] Hay un bloque `if __name__ == "__main__":` al final.
-
 ---
 
 #### Paso 1.3 — Reflexión sobre prompt engineering
@@ -236,11 +210,6 @@ Responde en español con formato de lista numerada.
 ```
 
 2. Copia la respuesta de Copilot en tu documento Word al final de la **SECCIÓN 1**, con la etiqueta `Reflexión 1C — Lecciones de Prompt Engineering`.
-
-**Verificación:**
-
-* [ ] La reflexión está copiada en el documento Word.
-* [ ] Contiene al menos 3 recomendaciones específicas de Copilot.
 
 ---
 
@@ -400,14 +369,6 @@ Al final, proporciona el script completo refactorizado siguiendo PEP 8 y buenas 
 
 **Salida esperada:** Análisis con al menos 6 problemas identificados y un script refactorizado que use `with open()`, elimine código duplicado con una función auxiliar, use `os.path.join()`, incluya manejo de excepciones y genere archivos de salida con nombres únicos.
 
-**Verificación:**
-
-* [ ] El problema del archivo no cerrado (`open()` sin `with`) fue identificado.
-* [ ] La duplicación de código fue detectada como problema de mantenibilidad.
-* [ ] El script refactorizado usa `with open(...) as f:` en todos los accesos a archivos.
-* [ ] Se usa `os.path.join()` para construir rutas.
-* [ ] El script refactorizado includes al menos un bloque `try/except`.
-
 ---
 
 #### Paso 2.3 — Generar un resumen ejecutivo de revisión de código
@@ -454,8 +415,6 @@ Responde en español con formato Markdown limpio.
 ### Escenario 3: Documentación Técnica Automatizada
 
 **Objetivo del escenario:** Usar Copilot Chat para generar documentación técnica completa y profesional a partir de los scripts creados en el Escenario 1, produciendo artefactos listos para un repositorio corporativo.
-
-**Tiempo estimado:** 20 minutos
 
 ---
 
@@ -775,17 +734,6 @@ Este laboratorio demostró cómo **Microsoft 365 Copilot Chat actúa como un cop
 2. **Revisión de código:** Copilot identifica eficazmente vulnerabilidades de seguridad (credenciales en texto plano, `Invoke-Expression`, escalación de privilegios), bugs lógicos (operadores incorrectos) y malas prácticas (recursos no liberados, código duplicado), especialmente cuando se le instruye a clasificar los hallazgos por severidad y referenciar estándares como OWASP y CIS Controls.
 3. **Documentación técnica:** La generación de READMEs, docstrings, guías de integración CI/CD y Quick Start Guides con Copilot reduce drásticamente el tiempo de documentación, produciendo artefactos estructurados y coherentes que se acuerdan con los estándares de docs-as-code vistos en la lección 2.1.
 4. **Auditoría técnica:** Copilot puede actuar como un auditor asistido por IA, generando checklists basados en estándares reconocidos, evaluando código contra esos criterios, identificando no conformidades con severidades y redactando reportes ejecutivos formales, acelerando significativamente el proceso de auditoría.
-
-### Conexión con la Lección 2.1
-
-| Concepto de la Lección 2.1 | Aplicación en este Laboratorio |
-| --- | --- |
-| Copilot Chat para generación de artefactos de pipeline | Scripts con exit codes para CI/CD (Paso 1.2) |
-| Docs-as-code y documentación automatizada | README, docstrings y guía CI/CD (Escenario 3) |
-| SAST y revisión de seguridad | Identificación de vulnerabilidades OWASP (Escenario 2) |
-| Puertas de calidad en pipelines | `--fail-threshold` y lógica de exit code 1 (Paso 1.2) |
-| Firma de artefactos (cosign/Sigstore) | Riesgo de auditoría por falta de firma (Paso 4.3) |
-| Síntesis de PR y resúmenes de cambios | Resumen ejecutivo de revisión de código (Paso 2.3) |
 
 ### Recursos Adicionales
 
