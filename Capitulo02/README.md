@@ -708,53 +708,7 @@ El reporte es muy bueno. Para finalizarlo, por favor:
 
 ---
 
-## 7. Validación y Pruebas del Laboratorio
-
-Una vez completados los 4 escenarios, realiza la siguiente validación integral:
-
-### Lista de Verificación Final
-
-| # | Criterio de Validación | Estado |
-|---|---|---|
-| 1 | Script PowerShell generado con función, parámetros y manejo de errores | ⬜ |
-| 2 | Script Python generado con argparse, logging y exit codes para CI/CD | ⬜ |
-| 3 | Reflexión de prompt engineering documentada | ⬜ |
-| 4 | Revisión de código PowerShell con mínimo 5 problemas identificados | ⬜ |
-| 5 | Revisión de código Python con mínimo 6 problemas identificados | ⬜ |
-| 6 | Resumen ejecutivo de revisión de código generado | ⬜ |
-| 7 | README completo del script PowerShell (mínimo 8 secciones) | ⬜ |
-| 8 | Especificación técnica Python con docstrings, YAML CI/CD y CSV de ejemplo | ⬜ |
-| 9 | Quick Start Guide para ambos scripts | ⬜ |
-| 10 | Checklist de auditoría con mínimo 28 ítems en 5 categorías | ⬜ |
-| 11 | Tabla de evaluación de no conformidades con severidades | ⬜ |
-| 12 | Reporte ejecutivo de auditoría con 8 secciones completas | ⬜ |
-| 13 | Documento Word guardado en OneDrive con portada y formato consistente | ⬜ |
-
-### Prompt de Auto-Evaluación Final
-
-Usa este prompt en Copilot Chat para obtener una evaluación de la calidad de tu trabajo:
-
-```
-Actúa como un evaluador de competencias en Microsoft 365 Copilot y prompt engineering.
-He completado un laboratorio de 4 escenarios que incluyó: generación de scripts PowerShell y Python, revisión de código con identificación de vulnerabilidades, generación de documentación técnica (README, docstrings, guía CI/CD) y creación de un reporte de auditoría técnica.
-
-Basándote en las mejores prácticas de prompt engineering y los estándares de documentación técnica, evalúa en una escala del 1 al 5 las siguientes competencias y dame recomendaciones específicas para mejorar:
-
-1. Claridad y especificidad de los prompts utilizados
-2. Uso efectivo de follow-up prompts para refinar resultados
-3. Calidad de los artefactos técnicos generados
-4. Aplicación de estándares de seguridad (OWASP/CIS) en la revisión de código
-5. Completitud y profesionalismo del reporte de auditoría
-
-Para cada competencia, dame: puntuación estimada (1-5), justificación y una acción concreta de mejora.
-Responde en español.
-```
-
-Copia la evaluación de Copilot en tu documento Word como **SECCIÓN 5: Auto-Evaluación**.
-
----
-
-## 8. Resumen y Recursos Adicionales
+## 7. Resumen y Recursos Adicionales
 
 ### Puntos Clave del Laboratorio
 
