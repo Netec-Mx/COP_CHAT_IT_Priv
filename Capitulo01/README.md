@@ -59,25 +59,6 @@ Al completar este laboratorio serás capaz de:
 
 ## 5. Entorno del Laboratorio
 
-### Hardware recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 (64-bit) | Intel Core i7 / AMD Ryzen 7 |
-| Memoria RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 2 GB | 5 GB |
-| Resolución de pantalla | 1280×768 | 1920×1080 |
-| Conexión a Internet | 10 Mbps | 25 Mbps o superior |
-
-### Software requerido
-
-| Software | Versión mínima | Uso en el laboratorio |
-|---|---|---|
-| Microsoft Edge o Google Chrome | Edge 120+ / Chrome 120+ | Acceso a Copilot Chat y Microsoft 365 Online |
-| Microsoft 365 Copilot Chat | Versión actual (SaaS) | Generación de todos los artefactos |
-| Microsoft Word (Online o Desktop) | Microsoft 365 versión actual | Documento de alcance y plan de pruebas |
-| Microsoft Excel (Online o Desktop) | Microsoft 365 versión actual | Tablero de KPIs |
-
 ### Configuración inicial del entorno
 
 Antes de comenzar los pasos del laboratorio, realiza las siguientes verificaciones:
@@ -214,14 +195,6 @@ Un documento Word estructurado de aproximadamente 3–5 páginas que contenga:
 - Criterios de entrada/salida desglosados por nivel de testing
 - Sección de estrategia de testing asistida por IA con mención explícita de las fases STLC
 
-#### Verificación
-
-- [ ] El documento contiene las 7 secciones solicitadas (incluyendo la estrategia IA)
-- [ ] La tabla de riesgos tiene al menos 6 filas y 6 columnas (incluyendo indicador de alerta)
-- [ ] Los criterios de entrada/salida cubren los 4 niveles de testing
-- [ ] El documento está guardado en OneDrive en la carpeta `Lab-01-00-01-STLC-IA`
-- [ ] Realizaste al menos un ciclo de refinamiento iterativo (Prompt 1.3 o equivalente)
-
 ---
 
 ### Paso 2 — Construcción del Tablero de KPIs en Excel
@@ -325,15 +298,6 @@ Un libro Excel con:
 - Hoja `Dashboard` con al menos un gráfico de comparación Con IA vs Sin IA
 - Fórmulas funcionales para Defect Density, Test Coverage, MTTD y ROI
 
-#### Verificación
-
-- [ ] El libro Excel tiene al menos 3 hojas con nombres descriptivos
-- [ ] La tabla de KPIs contiene las 10 métricas obligatorias más al menos 3 adicionales
-- [ ] Existen datos simulados para al menos 4 semanas en la hoja de datos
-- [ ] Al menos una fórmula de cálculo está implementada y funcional
-- [ ] El gráfico comparativo Con IA vs Sin IA está presente en el Dashboard
-- [ ] El archivo está guardado en OneDrive en la carpeta `Lab-01-00-01-STLC-IA`
-
 ---
 
 ### Paso 3 — Creación del Plan de Pruebas Estructurado (STLC Completo)
@@ -422,22 +386,12 @@ Responde en español con formato de documento profesional.
 
 #### Resultado Esperado
 
-Un documento Word de plan de pruebas de aproximadamente 6–10 páginas que contenga:
+Un documento Word de plan de pruebas que contenga:
 - Las 7 fases del STLC con criterios de entrada/salida en tabla
 - Estrategia de testing por módulo (tabla con 4 módulos)
 - Ejemplo de matriz de trazabilidad (5 requisitos)
 - Cronograma de 8 semanas
 - Definición de "done", plan de comunicación de defectos y política de regresión
-
-#### Verificación
-
-- [ ] El documento cubre las 7 fases del STLC
-- [ ] Cada fase tiene criterios de entrada Y salida en formato tabla
-- [ ] Cada fase incluye el rol explícito de Copilot/IA
-- [ ] La sección de estrategia por módulo cubre los 4 módulos de CorpERP 3.0
-- [ ] Existe una definición de "done" con criterios cuantitativos
-- [ ] El documento tiene portada con metadatos del proyecto
-- [ ] Archivo guardado en OneDrive en la carpeta `Lab-01-00-01-STLC-IA`
 
 ---
 
@@ -529,7 +483,7 @@ Responde en español.
 
 #### Resultado Esperado
 
-Un documento Word de guía de mejores prácticas de aproximadamente 5–8 páginas que contenga:
+Un documento Word de guía de mejores prácticas que contenga:
 - 5+ principios fundamentales con ejemplos
 - Mejores prácticas por cada fase STLC (3 prácticas × 7 fases = 21 prácticas)
 - 5+ antipatrones documentados
@@ -539,141 +493,9 @@ Un documento Word de guía de mejores prácticas de aproximadamente 5–8 págin
 - Roadmap de 90 días en tabla
 - Checklist de 10 preguntas y resumen ejecutivo
 
-#### Verificación
-
-- [ ] El documento contiene las 8 secciones principales solicitadas
-- [ ] Las plantillas de prompts tienen variables en [CORCHETES] y son reutilizables
-- [ ] El modelo de madurez tiene 4 niveles con indicadores medibles
-- [ ] El checklist tiene exactamente 10 preguntas con opciones Sí/No/En progreso
-- [ ] El resumen ejecutivo es comprensible para audiencia no técnica
-- [ ] El documento tiene tabla de contenidos
-- [ ] Archivo guardado en OneDrive en la carpeta `Lab-01-00-01-STLC-IA`
-
 ---
 
-## 7. Validación y Evaluación Final
-
-Al completar los 4 pasos del laboratorio, realiza la siguiente validación integral:
-
-### Lista de verificación final de artefactos
-
-Confirma que tienes los siguientes 4 archivos guardados en tu carpeta `Lab-01-00-01-STLC-IA` en OneDrive:
-
-| Artefacto | Archivo | Criterio de calidad mínimo |
-|---|---|---|
-| Documento de Alcance | `01-Alcance-CorpERP3.docx` | 7 secciones, tabla de riesgos con 6+ entradas, estrategia IA incluida |
-| Tablero de KPIs | `02-KPIs-Dashboard-CorpERP3.xlsx` | 3 hojas, 13+ KPIs definidos, datos simulados 4 semanas, 1+ gráfico |
-| Plan de Pruebas | `03-Plan-Pruebas-CorpERP3.docx` | 7 fases STLC, criterios entrada/salida, portada, cronograma 8 semanas |
-| Guía de Mejores Prácticas | `04-Guia-MejoresPracticas-IA-Testing.docx` | 8 secciones, 5+ plantillas de prompts, modelo madurez, roadmap 90 días |
-
-### Ejercicio de reflexión (5 minutos)
-
-Abre una nueva conversación en Copilot Chat y usa el siguiente prompt de autoevaluación:
-
-```
-Actúa como un evaluador de calidad de artefactos de testing. Voy a describirte los 
-artefactos que generé en un laboratorio de STLC asistido por IA y necesito que me 
-ayudes a identificar:
-1. Qué elementos podrían mejorarse en cada artefacto
-2. Qué preguntas debería hacerme para evaluar si los artefactos son adecuados 
-   para un proyecto ERP real
-3. Cómo mediría el impacto de haber usado IA vs no haberla usado en la generación 
-   de estos documentos
-
-Los artefactos que generé son: (1) Documento de alcance con identificación de riesgos, 
-(2) Tablero de KPIs con 13 métricas, (3) Plan de pruebas STLC completo, 
-(4) Guía de mejores prácticas con modelo de madurez.
-
-Responde en español con análisis crítico constructivo.
-```
-
-Documenta las observaciones de Copilot en un archivo de texto o en una nota al final de cualquiera de tus documentos Word. Esta reflexión forma parte de la evaluación del laboratorio.
-
-### Criterios de evaluación del laboratorio
-
-| Criterio | Peso | Indicadores |
-|---|---|---|
-| **Completitud de artefactos** | 30% | Los 4 artefactos están presentes y contienen todas las secciones solicitadas |
-| **Calidad del prompt engineering** | 25% | Evidencia de al menos 2 ciclos de refinamiento iterativo por artefacto |
-| **Profundidad técnica** | 25% | Los artefactos demuestran comprensión del STLC, KPIs y mejores prácticas de IA |
-| **Aplicabilidad práctica** | 20% | Los artefactos son utilizables en un proyecto real con ajustes mínimos |
-
----
-
-## 8. Resolución de Problemas
-
-### Problema 1 — Copilot genera respuestas en inglés o cambia de idioma a mitad de la conversación
-
-**Síntomas:**
-- Las respuestas de Copilot Chat aparecen total o parcialmente en inglés.
-- Al continuar la conversación, el idioma cambia inconsistentemente.
-- Las tablas o secciones técnicas aparecen en inglés aunque el texto narrativo esté en español.
-
-**Causa:**
-Copilot es un modelo multilingüe que puede cambiar de idioma cuando detecta términos técnicos en inglés en los prompts (como "STLC", "KPI", "ROI") o cuando el contexto de la conversación acumula suficiente texto en inglés para inclinar el modelo hacia ese idioma. Esto es un comportamiento normal del modelo de lenguaje, no un error de configuración.
-
-**Solución:**
-1. Agrega la instrucción de idioma **al inicio y al final** de cada prompt: `"Responde siempre en español, incluyendo tablas, encabezados y términos técnicos cuando tengan traducción aceptada."`
-2. Si el problema persiste en una conversación larga, inicia una **nueva conversación** y reestablece el contexto con el prompt de rol (Prompt 1.1, 2.1, etc.) incluyendo la instrucción de idioma desde el primer mensaje.
-3. Si una respuesta específica está en inglés, usa este follow-up prompt inmediato: `"Traduce tu respuesta anterior al español manteniendo exactamente la misma estructura, tablas y contenido."`
-4. Para conversaciones largas, agrega periódicamente el recordatorio: `"Recuerda responder siempre en español."`
-
----
-
-### Problema 2 — Las respuestas de Copilot son demasiado genéricas o no se alinean al contexto del proyecto CorpERP 3.0
-
-**Síntomas:**
-- Copilot genera artefactos con ejemplos de proyectos genéricos (e.g., "sistema de e-commerce", "aplicación web") en lugar de referencias al ERP ficticio.
-- Las tablas de riesgos o KPIs contienen valores placeholder como "Módulo X" o "Sistema Y".
-- El plan de pruebas no menciona los módulos específicos (Finanzas, RRHH, Cadena de Suministro, Reportería).
-- Las respuestas son superficiales, con listas de 2–3 elementos cuando se solicitaron 6+.
-
-**Causa:**
-Este problema ocurre cuando el contexto del proyecto no se establece adecuadamente al inicio de la conversación, cuando se inicia una nueva conversación sin reintroducir el contexto, o cuando el prompt no es suficientemente específico en cuanto a la cantidad y detalle requeridos. Copilot no tiene memoria entre conversaciones distintas.
-
-**Solución:**
-1. **Siempre** inicia cada nueva conversación con el prompt de contexto completo (similar al Prompt 1.1) antes de hacer solicitudes específicas. No asumas que Copilot recuerda conversaciones anteriores.
-2. Sé explícito en la cantidad: en lugar de "lista riesgos", escribe "lista exactamente 6 riesgos específicos para un proyecto de migración ERP cloud con los módulos Finanzas, RRHH, Cadena de Suministro y Reportería".
-3. Si la respuesta es genérica, usa este follow-up: `"La respuesta es demasiado genérica. Reescríbela usando exclusivamente el contexto de CorpERP 3.0 (migración ERP cloud para Corporación Nexus S.A.) y menciona explícitamente los módulos Finanzas, RRHH, Cadena de Suministro y Reportería en ejemplos concretos."`
-4. Proporciona ejemplos en el prompt: "Por ejemplo, para el módulo de Finanzas, un riesgo sería..." para anclar el nivel de especificidad esperado.
-5. Divide prompts muy largos en prompts más pequeños y secuenciales, confirmando que cada respuesta es satisfactoria antes de avanzar.
-
----
-
-## 9. Limpieza del Entorno
-
-Al finalizar el laboratorio, realiza los siguientes pasos de cierre:
-
-### Guardar y organizar artefactos finales
-
-1. Verifica que los 4 archivos estén guardados en OneDrive en la carpeta `Lab-01-00-01-STLC-IA`:
-   - `01-Alcance-CorpERP3.docx`
-   - `02-KPIs-Dashboard-CorpERP3.xlsx`
-   - `03-Plan-Pruebas-CorpERP3.docx`
-   - `04-Guia-MejoresPracticas-IA-Testing.docx`
-
-2. Agrega la fecha de creación al nombre de cada archivo si tu instructor lo requiere:
-   - Ejemplo: `01-Alcance-CorpERP3-YYYYMMDD.docx`
-
-3. Comparte la carpeta `Lab-01-00-01-STLC-IA` con tu instructor a través de OneDrive (clic derecho → Compartir → ingresar el correo del instructor con permisos de **solo lectura**).
-
-### Cerrar sesiones de Copilot Chat
-
-1. En [copilot.microsoft.com](https://copilot.microsoft.com), cierra todas las conversaciones abiertas haciendo clic en el ícono de historial y eliminando las conversaciones del laboratorio si contienen información que no deseas conservar.
-
-   > ⚠️ **Recordatorio de privacidad:** Aunque este laboratorio usa datos ficticios, es buena práctica limpiar el historial de Copilot Chat al finalizar sesiones de trabajo.
-
-2. Cierra las pestañas del navegador relacionadas con Copilot Chat.
-
-### Notas sobre retención de artefactos
-
-- Los artefactos generados en este laboratorio (documentos Word y Excel) son **propiedad del participante** y pueden adaptarse para uso real en sus proyectos, siempre que se reemplacen los datos ficticios por información real de sus proyectos.
-- Las plantillas de prompts de la Guía de Mejores Prácticas son especialmente valiosas para reutilización futura; considera guardarlas en un repositorio de QA de tu equipo.
-- No es necesario eliminar los archivos de OneDrive a menos que tu instructor lo indique; estos artefactos serán referenciados en laboratorios posteriores del curso.
-
----
-
-## 10. Resumen y Recursos Adicionales
+## 7. Resumen y Recursos Adicionales
 
 ### Lo que lograste en este laboratorio
 
