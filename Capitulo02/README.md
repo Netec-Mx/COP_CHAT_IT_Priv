@@ -81,7 +81,7 @@ Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
 4. Selecciona el modo **Work** para que Copilot tenga contexto de tu organización M365.
 5. Escribe el siguiente prompt de verificación:
 ```markdown
-```text
+
 Hola Copilot. Confirma que puedes ayudarme con generación de código PowerShell y Python, revisión de scripts y documentación técnica. Responde siempre en español.
 
 ```
