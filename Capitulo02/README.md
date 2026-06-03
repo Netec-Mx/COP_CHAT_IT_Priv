@@ -217,6 +217,7 @@ Responde en español con formato de lista numerada.
 
 **Instrucciones:**
 
+````markdown
 1. En Copilot Chat, escribe el siguiente prompt incluyendo el código problemático:
 
 ````text
@@ -289,55 +290,54 @@ Gracias por el análisis. Noto que no mencionaste [el problema específico que f
 
 **Instrucciones:**
 
+````markdown
 1. En Copilot Chat, escribe el siguiente prompt con el código problemático:
 
-```
+````text
 Actúa como un revisor de código Python senior con experiencia en optimización de rendimiento y buenas prácticas PEP 8.
-Analiza el siguiente script Python que procesa archivos de log de un servidor web. Identifica todos los problemas y clasifícalos igual que antes (🔴 CRÍTICO, 🟡 ADVERTENCIA, 🟢 SUGERENCIA).
-
-Para cada problema, explica: qué está mal, cuál es el impacto en rendimiento o seguridad, y cómo corregirlo.
+Analiza el siguiente script Python que procesa archivos de log de un servidor web.
 
 Script a revisar:
 
-import os
-import json
+    import os
+    import json
 
-def process_logs(log_file):
-    errors = []
-    warnings = []
-    data = open(log_file).read()
-    lines = data.split('\n')
-    
-    for i in range(0, len(lines)):
-        line = lines[i]
-        if 'ERROR' in line:
-            errors.append(line)
-        if 'WARNING' in line:
-            warnings.append(line)
-    
-    result = {}
-    result['errors'] = errors
-    result['warnings'] = warnings
-    result['total'] = len(errors) + len(warnings)
-    
-    output_file = open('output.json', 'w')
-    json.dump(result, output_file)
-    
-    return result
+    def process_logs(log_file):
+        errors = []
+        warnings = []
+        data = open(log_file).read()
+        lines = data.split('\n')
 
-def get_critical_errors(log_file):
-    all_errors = []
-    data = open(log_file).read()
-    for line in data.split('\n'):
-        if 'ERROR' in line:
-            all_errors.append(line)
-    return all_errors
+        for i in range(0, len(lines)):
+            line = lines[i]
+            if 'ERROR' in line:
+                errors.append(line)
+            if 'WARNING' in line:
+                warnings.append(line)
 
-logs_dir = '/var/logs'
-for f in os.listdir(logs_dir):
-    process_logs(logs_dir + '/' + f)
+        result = {}
+        result['errors'] = errors
+        result['warnings'] = warnings
+        result['total'] = len(errors) + len(warnings)
 
-Al final, proporciona el script completo refactorizado siguiendo PEP 8 y buenas prácticas. Responde en español.
+        output_file = open('output.json', 'w')
+        json.dump(result, output_file)
+
+        return result
+
+    def get_critical_errors(log_file):
+        all_errors = []
+        data = open(log_file).read()
+        for line in data.split('\n'):
+            if 'ERROR' in line:
+                all_errors.append(line)
+        return all_errors
+
+    logs_dir = '/var/logs'
+    for f in os.listdir(logs_dir):
+        process_logs(logs_dir + '/' + f)
+
+Explica problemas y refactoriza.
 ```
 
 2. Verifica que Copilot haya identificado al menos los siguientes problemas intencionales:
