@@ -281,7 +281,7 @@ Gracias por el análisis. Noto que no mencionaste [el problema específico que f
 **Salida esperada:** Un análisis estructurado con al menos 5 problemas identificados (mínimo 2 críticos de seguridad), explicaciones de impacto y un script corregido que use `ConvertTo-SecureString`, elimine `Invoke-Expression`, use `-eq` para comparación y no asigne automáticamente el rol de Administrador.
 
 
----
+
 
 #### Paso 2.2 — Revisar un script Python con errores lógicos y de rendimiento
 
