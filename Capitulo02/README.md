@@ -1,4 +1,4 @@
-```markdown
+
 # Generación de scripts, revisión de código, documentación técnica automatizada y apoyo en procesos de auditoría con Copilot.
 
 ## 1. Metadatos
@@ -80,7 +80,7 @@ Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
 3. Confirma que el chat está disponible y que aparece el selector de modo (Web / Work).
 4. Selecciona el modo **Work** para que Copilot tenga contexto de tu organización M365.
 5. Escribe el siguiente prompt de verificación:
-
+```markdown
 ```text
 Hola Copilot. Confirma que puedes ayudarme con generación de código PowerShell y Python, revisión de scripts y documentación técnica. Responde siempre en español.
 
