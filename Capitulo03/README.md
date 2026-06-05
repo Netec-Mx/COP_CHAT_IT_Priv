@@ -705,7 +705,7 @@ Este laboratorio integra directamente los conceptos de:
 
 | Recurso | URL / Referencia |
 |---|---|
-| ITIL 4 Foundation — Gestión de Incidentes y Problemas | [peoplecert.org/itil-4-foundation](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/itil-1/itil-4-foundation-7) |
+| ITIL 4 Foundation — Gestión de Incidentes y Problemas | [peoplecert.org/itil-4-foundation](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-4-foundation-2565) |
 | Google SRE — Gestión de Incidentes | [sre.google/sre-book](https://sre.google/sre-book/) |
 | Microsoft Copilot — Documentación oficial | [learn.microsoft.com/copilot](https://learn.microsoft.com/en-us/copilot/) |
 | Metodología 5 Porqués — ASQ | [asq.org/quality-resources/five-whys](https://asq.org/quality-resources/five-whys) |
