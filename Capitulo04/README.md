@@ -712,7 +712,7 @@ Este laboratorio puso en práctica los tres pilares de la transformación del Se
 
 | Recurso | URL | Relevancia |
 |---|---|---|
-| Microsoft Copilot for Service | [learn.microsoft.com/copilot-overview](https://learn.microsoft.com/en-us/dynamics365/customer-service/copilot-overview) | Capacidades de Copilot en Service Desk |
+| Microsoft Copilot for Service | [learn.microsoft.com/copilot-overview](https://learn.microsoft.com/en-us/dynamics365/contact-center/use/overview-ai-agents-copilot-features) | Capacidades de Copilot en Service Desk |
 | KCS Academy — Fundamentals | [kcsacademy.com](https://www.kcsacademy.com) | Metodología KCS para bases de conocimiento |
 | ITIL 4 Practice Guide: Service Desk | [axelos.com](https://www.axelos.com/certifications/itil-service-management/itil-4-foundation) | Framework ITIL v4 para Service Desk |
 | Azure OpenAI RAG Pattern | [learn.microsoft.com/use-your-data](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data) | Arquitectura técnica RAG para KB |
