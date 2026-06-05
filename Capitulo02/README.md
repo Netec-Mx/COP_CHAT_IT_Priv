@@ -741,7 +741,7 @@ Este laboratorio demostró cómo **Microsoft 365 Copilot Chat actúa como un cop
 | PowerShell Best Practices and Style Guide | [https://poshcode.gitbook.io/powershell-practice-and-style/](https://poshcode.gitbook.io/powershell-practice-and-style/) |
 | PEP 8 — Guía de estilo Python | [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/) |
 | Google Python Style Guide (docstrings) | [https://google.github.io/styleguide/pyguide.html](https://google.github.io/styleguide/pyguide.html) |
-| Sigstore cosign — Firma de artefactos | [https://docs.sigstore.dev/cosign/overview/](https://docs.sigstore.dev/cosign/overview/) |
+| Sigstore cosign — Firma de artefactos | [https://docs.sigstore.dev/quickstart/](https://docs.sigstore.dev/cosign/overview/) |
 | GitHub Actions — Referencia de workflows | [https://docs.github.com/en/actions](https://docs.github.com/en/actions) |
 
 ---
