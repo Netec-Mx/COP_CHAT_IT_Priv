@@ -59,16 +59,6 @@ Al finalizar este laboratorio, el participante será capaz de:
 
 ## 5. Entorno de Laboratorio
 
-### 5.1 Hardware Mínimo Recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
-| RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 500 MB | 2 GB |
-| Resolución de pantalla | 1280×768 | 1920×1080 |
-| Conexión a Internet | 10 Mbps | 25 Mbps |
-
 ### 5.2 Software Requerido
 
 | Aplicación | Versión mínima | Uso en el laboratorio |
@@ -110,13 +100,11 @@ Confirma que tienes acceso a mi contexto corporativo escribiendo:
 
 ## 6. Procedimiento Paso a Paso
 
-El laboratorio está dividido en **4 actividades principales**. Cada actividad tiene una duración estimada indicada.
+El laboratorio está dividido en **4 actividades principales**. 
 
 ---
 
 ### Actividad 1: Construcción de la Base de Conocimiento (KB)
-
-**⏱ Duración estimada: 20 minutos**
 
 **Objetivo de la actividad:** Generar un conjunto de artículos de conocimiento estructurados para los 10 casos más frecuentes de Service Desk, aplicando la metodología KCS y el concepto de grounding del contenido corporativo visto en la lección 4.1.
 
@@ -160,8 +148,6 @@ Por favor, traduce toda la plantilla al español y mantenla en formato Markdown.
 ```
 
 **Resultado esperado:** Una plantilla Markdown estructurada con los 10 campos KCS, lista para ser replicada en cada artículo.
-
-**Verificación:** La plantilla debe contener exactamente los 10 campos solicitados, estar en español y usar formato Markdown con encabezados (`##`, `###`) y listas.
 
 ---
 
@@ -228,13 +214,6 @@ Responde siempre en español.
 
 **Resultado esperado:** 10 artículos de conocimiento completos en formato KCS, con todos los campos requeridos, guardados en el documento Word.
 
-**Verificación:** Revisa que cada artículo tenga:
-- [ ] ID único (KB-0001 a KB-0010)
-- [ ] Mínimo 5 pasos de resolución numerados
-- [ ] Criterios de escalación definidos
-- [ ] Mínimo 5 palabras clave
-- [ ] Nivel de resolución (N1/N2) indicado
-
 ---
 
 #### Paso 1.3 — Estructurar y dar formato a la KB en Word
@@ -271,15 +250,11 @@ Responde siempre en español.
 3. Añade manualmente los artículos generados en los pasos anteriores bajo sus categorías correspondientes.
 4. Guarda el documento en OneDrive.
 
-**Resultado esperado:** Documento Word completo con portada, índice categorizado y 10 artículos KCS organizados por categoría.
-
-**Verificación:** El documento debe tener al menos 15 páginas y estar guardado en `Lab04-ServiceDesk-KB/Artefactos/`.
+**Resultado esperado:** Documento Word con 10 artículos KCS organizados por categoría.
 
 ---
 
 ### Actividad 2: Diseño de Flujos de Autoservicio Conversacional
-
-**⏱ Duración estimada: 15 minutos**
 
 **Objetivo de la actividad:** Diseñar los guiones de flujos de autoservicio conversacionales (árboles de decisión) para los 3 casos más frecuentes, aplicando el concepto de shift-left y detección de intención visto en la lección 4.1.
 
@@ -323,8 +298,6 @@ indentación para mostrar la jerarquía. Responde siempre en español.
 2. Copia el resultado al documento Word en una nueva sección llamada **"Sección 2: Flujos de Autoservicio"**.
 
 **Resultado esperado:** Árbol de decisión con al menos 3 niveles, 4 ramas de causa raíz y criterios de escalación claros.
-
-**Verificación:** El flujo debe incluir texto exacto para el bot (entre comillas), opciones de respuesta del usuario y criterios de escalación en cada rama terminal.
 
 ---
 
@@ -375,12 +348,6 @@ Responde siempre en español.
 
 **Resultado esperado:** Tres flujos de autoservicio completos (VPN, contraseña, Teams) documentados en la sección 2 del documento Word.
 
-**Verificación:** Cada flujo debe tener:
-- [ ] Mínimo 3 niveles de profundidad
-- [ ] Texto exacto de mensajes del bot
-- [ ] Criterios claros de escalación a agente humano
-- [ ] Al menos una acción automatizada posible identificada
-
 ---
 
 #### Paso 2.3 — Generar resumen ejecutivo de los flujos
@@ -415,8 +382,6 @@ encabezados. Responde siempre en español.
 ---
 
 ### Actividad 3: Gestión de Casos Típicos de Service Desk
-
-**⏱ Duración estimada: 15 minutos**
 
 **Objetivo de la actividad:** Usar Copilot para gestionar 5 casos de soporte con información parcial, generando respuestas estandarizadas, instrucciones técnicas y comunicaciones al usuario final en tono profesional y empático, tal como haría un agente N1 aumentado.
 
@@ -478,8 +443,6 @@ artículos KB cuando corresponda (KB-0001 a KB-0010).
 
 **Resultado esperado:** Para cada uno de los 5 casos: respuesta al usuario, instrucciones técnicas al agente y nota interna del ticket, con referencias a artículos KB.
 
-**Verificación:** Revisa que cada caso tenga los tres componentes (A, B, C) y que las respuestas al usuario sean empáticas y no técnicas, mientras las instrucciones al agente sean técnicas y concretas.
-
 ---
 
 #### Paso 3.2 — Generar plantillas de comunicación estandarizadas
@@ -514,8 +477,6 @@ Responde siempre en español.
 2. Copia las 4 plantillas al documento Word como subsección de la Sección 3.
 
 **Resultado esperado:** 4 plantillas de comunicación con variables de personalización, línea de asunto y firma estándar.
-
-**Verificación:** Las plantillas deben usar las variables entre corchetes especificadas y tener tono claramente diferenciado (no técnico para el usuario).
 
 ---
 
@@ -552,8 +513,6 @@ Responde siempre en español.
 ---
 
 ### Actividad 4: Tablero de Análisis de Impacto en Métricas Operativas
-
-**⏱ Duración estimada: 10 minutos**
 
 **Objetivo de la actividad:** Proyectar el impacto de la base de conocimiento inteligente en las métricas operativas clave del Service Desk (FCR, AHT, CSAT) construyendo un tablero de análisis en Excel con tres escenarios.
 
@@ -609,8 +568,6 @@ Responde siempre en español.
 2. Copia el resultado al documento Word temporalmente para referencia.
 
 **Resultado esperado:** Modelo completo del tablero con estructura de 3 hojas, datos de línea base, fórmulas Excel y lógica de cálculo para los 3 escenarios.
-
-**Verificación:** El modelo debe incluir fórmulas Excel específicas, los 3 escenarios (conservador, realista, optimista) y las 5 métricas principales (FCR, AHT, CSAT, TTR, escalaciones).
 
 ---
 
@@ -676,8 +633,6 @@ Responde siempre en español.
 
 **Resultado esperado:** Tablero Excel funcional con 3 hojas, datos de línea base, proyecciones para 3 escenarios y análisis ejecutivo con cálculo de ROI.
 
-**Verificación:** El tablero debe mostrar valores numéricos calculados (no solo texto) en las celdas de proyección, y el análisis ejecutivo debe incluir cálculo de ROI con datos concretos.
-
 ---
 
 #### Paso 4.3 — Reflexión final y cierre del laboratorio
@@ -725,147 +680,7 @@ Responde siempre en español. Formato: encabezados claros y listas.
 
 ---
 
-## 7. Validación y Pruebas
-
-### Lista de Verificación Final del Laboratorio
-
-Antes de dar por completado el laboratorio, verifica que todos los artefactos estén completos y guardados:
-
-#### Documento Word — `KB-ServiceDesk-[TuNombre].docx`
-
-| # | Criterio de validación | ✅ / ❌ |
-|---|---|---|
-| 1 | Portada con título, versión, fecha y descripción | |
-| 2 | Índice organizado por 5 categorías | |
-| 3 | 10 artículos KB completos (KB-0001 a KB-0010) con todos los campos KCS | |
-| 4 | Cada artículo tiene mínimo 5 pasos de resolución numerados | |
-| 5 | Criterios de escalación definidos en cada artículo | |
-| 6 | 3 flujos de autoservicio con árbol de decisión (VPN, contraseña, Teams) | |
-| 7 | Resumen ejecutivo de flujos con estimaciones de resolución autónoma | |
-| 8 | 5 casos gestionados con respuesta usuario + instrucciones agente + nota ITSM | |
-| 9 | 4 plantillas de comunicación estandarizadas con variables | |
-| 10 | Análisis de patrones en los 5 casos | |
-| 11 | Análisis ejecutivo con cálculo de ROI | |
-| 12 | Reflexión final y hoja de ruta de 90 días | |
-
-#### Libro Excel — `Dashboard-Metricas-[TuNombre].xlsx`
-
-| # | Criterio de validación | ✅ / ❌ |
-|---|---|---|
-| 1 | Hoja "Línea Base" con 8 métricas y valores numéricos | |
-| 2 | Hoja "Proyección de Impacto" con 3 escenarios (conservador, realista, optimista) | |
-| 3 | Fórmulas funcionales que calculan automáticamente los valores proyectados | |
-| 4 | Hoja "KPIs de Adopción" con métricas de adopción y análisis ejecutivo | |
-| 5 | Ahorro mensual y anual calculado para cada escenario | |
-
-### Prueba de Calidad del Contenido
-
-Para verificar la calidad de los artículos KB generados, aplica esta rúbrica a 2 artículos seleccionados al azar:
-
-| Dimensión | Criterio | Puntuación (1-3) |
-|---|---|---|
-| **Completitud** | Todos los campos KCS están presentes y completos | |
-| **Accionabilidad** | Los pasos son específicos y ejecutables sin ambigüedad | |
-| **Escalación** | Los criterios de escalación son claros y medibles | |
-| **Tono** | Lenguaje técnico apropiado para agente N1 | |
-| **Búsqueda** | Las palabras clave cubren variaciones del problema | |
-
-> Puntuación mínima esperada: 12/15 puntos por artículo.
-
----
-
-## 8. Resolución de Problemas
-
-### Problema 1: Copilot genera artículos KB incompletos o con campos faltantes
-
-**Síntomas:**
-- Los artículos generados omiten campos como "Notas de escalación" o "Palabras clave".
-- Los pasos de resolución son genéricos y no tienen el nivel de detalle requerido.
-- El formato Markdown no se mantiene consistente entre artículos.
-
-**Causa probable:**
-El prompt original fue demasiado extenso (solicitó 5 artículos a la vez) y Copilot priorizó la cantidad sobre la calidad. Los modelos de lenguaje pueden "comprimir" el contenido cuando la ventana de contexto se satura con múltiples solicitudes complejas simultáneas.
-
-**Solución:**
-1. Genera los artículos de uno en uno o en grupos de 2, no de 5 a la vez.
-2. Usa el siguiente prompt de refinamiento específico para el artículo incompleto:
-
-```
-El artículo KB-[NÚMERO] está incompleto. Específicamente falta:
-- [Campo faltante 1]
-- [Campo faltante 2]
-
-Por favor, regenera SOLO ese artículo completo con todos los 
-campos de la plantilla KCS, con especial atención en incluir 
-mínimo 5 pasos de resolución numerados y concretos, y al menos 
-5 palabras clave relevantes. Responde siempre en español.
-```
-
-3. Si el problema persiste, inicia una nueva sesión de Copilot Chat y pega la plantilla KCS completa antes de solicitar el artículo específico.
-
----
-
-### Problema 2: El tablero de Excel muestra errores en las fórmulas de proyección
-
-**Síntomas:**
-- Las celdas de proyección muestran `#REF!`, `#VALUE!` o `#NAME?`.
-- Los valores calculados son negativos o superan el 100% en métricas de porcentaje.
-- Las referencias entre hojas (`='Línea Base'!B3`) no funcionan.
-
-**Causa probable:**
-Las referencias de celda generadas por Copilot son sugerencias basadas en una estructura genérica y pueden no coincidir exactamente con la posición real de los datos en tu hoja Excel. Adicionalmente, si los valores de porcentaje se ingresaron como números enteros (65 en lugar de 0.65), las fórmulas de multiplicación generarán resultados incorrectos.
-
-**Solución:**
-1. Verifica que los valores de porcentaje en la hoja "Línea Base" estén formateados como porcentaje en Excel (0.65 = 65%) o ajusta las fórmulas para dividir entre 100.
-2. Para corregir referencias rotas, usa el siguiente prompt en Copilot Chat:
-
-```
-Las fórmulas de mi tablero Excel tienen errores. Mi hoja "Línea Base" 
-tiene esta estructura:
-- A1: "Métrica", B1: "Valor Actual", C1: "Unidad"
-- A2: "Volumen mensual", B2: 800
-- A3: "FCR", B3: 0.65 (formato decimal)
-- A4: "AHT", B4: 18
-
-Regenera las fórmulas para la hoja "Proyección de Impacto" usando 
-exactamente estas referencias de celda. FCR y porcentajes están en 
-formato decimal (0.65 = 65%). Responde siempre en español.
-```
-
-3. Si el problema persiste, construye el tablero manualmente usando los valores calculados que Copilot proporcionó en texto, ingresándolos directamente como valores fijos en las celdas.
-
----
-
-## 9. Limpieza del Entorno
-
-Al finalizar el laboratorio, realiza las siguientes acciones de cierre:
-
-### 9.1 Guardar y Organizar Artefactos
-
-1. **Guardar documentos finales:** Asegúrate de que ambos archivos estén guardados en OneDrive:
-   - `Lab04-ServiceDesk-KB/Artefactos/KB-ServiceDesk-[TuNombre].docx`
-   - `Lab04-ServiceDesk-KB/Artefactos/Dashboard-Metricas-[TuNombre].xlsx`
-
-2. **Tomar capturas de pantalla:** Guarda al menos 3 capturas de pantalla en `Lab04-ServiceDesk-KB/Capturas/`:
-   - Una captura del documento Word mostrando la tabla de contenido
-   - Una captura del tablero Excel mostrando la hoja "Proyección de Impacto"
-   - Una captura de Copilot Chat mostrando uno de los flujos de autoservicio
-
-3. **Verificar acceso compartido:** Si el instructor solicitó entrega en SharePoint, sube los archivos a la carpeta de entrega del curso.
-
-### 9.2 Cerrar Sesiones
-
-1. Cierra las pestañas de Copilot Chat en el navegador (el historial no se guarda permanentemente; ya debes tener todo copiado en tus documentos).
-2. Cierra los documentos Word y Excel después de confirmar que están guardados en OneDrive.
-3. No es necesario revocar accesos ni eliminar configuraciones; este laboratorio no modificó ninguna configuración del tenant de Microsoft 365.
-
-### 9.3 Nota sobre Privacidad
-
-> 🔒 Verifica que ninguno de los artefactos generados contenga información real de tu organización. Todos los datos usados en este laboratorio deben ser ficticios (nombres como "María González", empresa genérica "corporativa"). Si accidentalmente ingresaste datos reales, elimina esas secciones antes de guardar o compartir los documentos.
-
----
-
-## 10. Resumen
+## 7. Resumen
 
 ### Lo que Construiste en este Laboratorio
 
@@ -897,7 +712,7 @@ Este laboratorio puso en práctica los tres pilares de la transformación del Se
 
 | Recurso | URL | Relevancia |
 |---|---|---|
-| Microsoft Copilot for Service | [learn.microsoft.com/copilot-overview](https://learn.microsoft.com/en-us/dynamics365/customer-service/copilot-overview) | Capacidades de Copilot en Service Desk |
+| Microsoft Copilot for Service | [learn.microsoft.com/copilot-overview](https://learn.microsoft.com/en-us/dynamics365/contact-center/use/overview-ai-agents-copilot-features) | Capacidades de Copilot en Service Desk |
 | KCS Academy — Fundamentals | [kcsacademy.com](https://www.kcsacademy.com) | Metodología KCS para bases de conocimiento |
 | ITIL 4 Practice Guide: Service Desk | [axelos.com](https://www.axelos.com/certifications/itil-service-management/itil-4-foundation) | Framework ITIL v4 para Service Desk |
 | Azure OpenAI RAG Pattern | [learn.microsoft.com/use-your-data](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data) | Arquitectura técnica RAG para KB |

@@ -1,3 +1,4 @@
+
 # Generación de scripts, revisión de código, documentación técnica automatizada y apoyo en procesos de auditoría con Copilot.
 
 ## 1. Metadatos
@@ -21,7 +22,7 @@ Este laboratorio aplica directamente los conceptos de automatización del SDLC v
 
 ## 3. Objetivos de Aprendizaje
 
-Al finalizar este laboratorio, el participante será capaz de:
+Al finalizar este laboratorio, el participant será capaz de:
 
 - [ ] **Generar** scripts de automatización funcionales en PowerShell y Python usando prompts de ingeniería orientados a código en Copilot Chat.
 - [ ] **Revisar** fragmentos de código con errores intencionales mediante Copilot para obtener diagnósticos detallados, versiones corregidas y recomendaciones de seguridad alineadas con estándares como OWASP y CIS Controls.
@@ -58,16 +59,6 @@ Al finalizar este laboratorio, el participante será capaz de:
 
 ## 5. Entorno de Laboratorio
 
-### Hardware mínimo recomendado
-
-| Componente | Mínimo | Recomendado |
-|---|---|---|
-| Procesador | Intel Core i5 8ª gen / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
-| RAM | 8 GB | 16 GB |
-| Almacenamiento libre | 500 MB | 2 GB |
-| Resolución de pantalla | 1280 × 768 | 1920 × 1080 |
-| Conexión a Internet | 10 Mbps | 25 Mbps |
-
 ### Configuración inicial del entorno
 
 Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
@@ -79,9 +70,10 @@ Antes de comenzar los ejercicios, ejecuta los siguientes pasos de preparación:
 3. Confirma que el chat está disponible y que aparece el selector de modo (Web / Work).
 4. Selecciona el modo **Work** para que Copilot tenga contexto de tu organización M365.
 5. Escribe el siguiente prompt de verificación:
+```markdown
 
-```
 Hola Copilot. Confirma que puedes ayudarme con generación de código PowerShell y Python, revisión de scripts y documentación técnica. Responde siempre en español.
+
 ```
 
 **Resultado esperado:** Copilot confirma sus capacidades en español.
@@ -93,7 +85,7 @@ Hola Copilot. Confirma que puedes ayudarme con generación de código PowerShell
 3. Guárdalo en OneDrive en la carpeta `Lab02-00-01`.
 4. Este documento será tu repositorio de artefactos durante todo el laboratorio. Añade el siguiente encabezado inicial:
 
-```
+```text
 LAB 02-00-01 — Artefactos de Trabajo
 Participante: [Tu nombre]
 Fecha: [Fecha actual]
@@ -102,6 +94,7 @@ SECCIÓN 1: Scripts Generados
 SECCIÓN 2: Revisión de Código
 SECCIÓN 3: Documentación Técnica
 SECCIÓN 4: Reporte de Auditoría
+
 ```
 
 > ⚠️ **Recordatorio de privacidad:** No ingreses datos reales de tu organización en Copilot Chat. Todos los escenarios de este laboratorio usan datos ficticios.
@@ -118,8 +111,6 @@ El laboratorio se divide en **cuatro escenarios** encadenados. Cada escenario co
 
 **Objetivo del escenario:** Usar Copilot Chat con técnicas de prompt engineering para generar scripts funcionales de automatización de IT en PowerShell y Python, aplicando el patrón de prompts iterativos aprendido en la lección 2.1.
 
-**Tiempo estimado:** 20 minutos
-
 ---
 
 #### Paso 1.1 — Generar un script PowerShell de verificación de servicios críticos
@@ -130,7 +121,7 @@ El laboratorio se divide en **cuatro escenarios** encadenados. Cada escenario co
 
 1. En Copilot Chat (modo Work), escribe el siguiente prompt inicial:
 
-```
+```text
 Actúa como un ingeniero de automatización de IT senior.
 Genera un script de PowerShell que realice las siguientes tareas:
 1. Verifique el estado de los siguientes servicios de Windows: 'wuauserv', 'WinDefend', 'EventLog', 'Spooler', 'BITS'.
@@ -139,30 +130,24 @@ Genera un script de PowerShell que realice las siguientes tareas:
 4. Si algún servicio crítico está detenido, muestre una advertencia en consola con color rojo.
 5. Incluye manejo de errores con try/catch y comentarios explicativos en cada sección.
 Responde siempre en español para las explicaciones, pero el código debe estar en inglés.
+
 ```
 
 2. Revisa el script generado. Identifica si incluye: manejo de errores, comentarios, generación de archivo de reporte y alertas de color.
-
 3. Si el script no incluye alguno de estos elementos, usa el siguiente **follow-up prompt** de refinamiento:
 
-```
+```text
 El script generado es un buen punto de partida. Por favor, mejóralo con los siguientes cambios:
 - Agrega una función separada llamada 'Get-ServiceStatus' que encapsule la lógica de verificación.
 - Incluye un parámetro de entrada '-OutputPath' para que el usuario pueda especificar la ruta del reporte.
 - Agrega una sección de resumen al final del reporte que indique cuántos servicios están activos y cuántos detenidos.
 - Asegúrate de que el script sea compatible con PowerShell 5.1 y PowerShell 7.
+
 ```
 
 4. Copia el script final generado en tu documento Word bajo **SECCIÓN 1: Scripts Generados**, con la etiqueta `Script 1A — PowerShell Verificación de Servicios`.
 
 **Salida esperada:** Un script PowerShell de aproximadamente 50–80 líneas con funciones definidas, manejo de errores `try/catch`, parámetros de entrada, generación de archivo `.txt` y alertas de consola con `Write-Host -ForegroundColor Red`.
-
-**Verificación:**
-- [ ] El script contiene al menos una función definida con `function`.
-- [ ] Existe un bloque `try { } catch { }` para manejo de errores.
-- [ ] El script acepta un parámetro de entrada (`param`).
-- [ ] Hay comentarios explicativos en al menos 5 secciones del código.
-- [ ] El script genera un archivo de reporte con nombre dinámico que incluye la fecha.
 
 ---
 
@@ -174,7 +159,7 @@ El script generado es un buen punto de partida. Por favor, mejóralo con los sig
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Actúa como un ingeniero de QA y automatización de red.
 Genera un script de Python 3.10+ que realice las siguientes tareas:
 1. Reciba como argumento de línea de comandos un archivo CSV con dos columnas: 'hostname' y 'port'.
@@ -185,29 +170,23 @@ Genera un script de Python 3.10+ que realice las siguientes tareas:
 6. Usa las librerías estándar de Python (socket, csv, json, time, argparse, datetime). No uses librerías externas.
 7. Incluye docstrings en todas las funciones y manejo de excepciones robusto.
 Responde siempre en español para las explicaciones, pero el código en inglés.
+
 ```
 
 2. Analiza el script generado. Verifica que use únicamente librerías estándar de Python y que incluya docstrings.
-
 3. Aplica el siguiente prompt de refinamiento orientado a buenas prácticas de CI/CD (conexión con lección 2.1):
 
-```
+```text
 Excelente. Ahora mejora el script con estas adiciones orientadas a pipelines CI/CD:
 - Agrega un argumento '--fail-threshold' que reciba un porcentaje (0-100). Si la disponibilidad total es menor a ese umbral, el script debe terminar con exit code 1 (para que un pipeline CI/CD lo detecte como fallo).
 - Agrega logging estructurado usando el módulo 'logging' de Python con nivel configurable via argumento '--log-level'.
 - Asegúrate de que el script tenga un bloque 'if __name__ == "__main__"' correcto.
+
 ```
 
 4. Copia el script final en tu documento Word bajo **SECCIÓN 1**, con la etiqueta `Script 1B — Python Pruebas de Conectividad`.
 
 **Salida esperada:** Un script Python de aproximadamente 80–120 líneas con `argparse`, manejo de sockets TCP, generación de JSON, logging estructurado, docstrings en cada función y exit codes para integración con pipelines.
-
-**Verificación:**
-- [ ] El script usa únicamente librerías de la biblioteca estándar de Python.
-- [ ] Todas las funciones tienen docstrings.
-- [ ] Existe manejo de excepciones (`try/except`) para errores de conexión.
-- [ ] El script incluye el argumento `--fail-threshold` con lógica de exit code 1.
-- [ ] Hay un bloque `if __name__ == "__main__":` al final.
 
 ---
 
@@ -219,27 +198,22 @@ Excelente. Ahora mejora el script con estas adiciones orientadas a pipelines CI/
 
 1. En Copilot Chat, escribe el siguiente prompt de meta-reflexión:
 
-```
+```text
 Basándote en los dos scripts que generamos (PowerShell de verificación de servicios y Python de conectividad), explícame:
 1. ¿Qué elementos de un buen prompt para generación de código son más importantes?
 2. ¿Qué diferencias hay entre hacer un prompt de una sola vez vs. usar follow-up prompts iterativos?
 3. Dame 3 recomendaciones específicas para mejorar prompts de generación de código en el contexto de automatización de IT.
 Responde en español con formato de lista numerada.
+
 ```
 
 2. Copia la respuesta de Copilot en tu documento Word al final de la **SECCIÓN 1**, con la etiqueta `Reflexión 1C — Lecciones de Prompt Engineering`.
-
-**Verificación:**
-- [ ] La reflexión está copiada en el documento Word.
-- [ ] Contiene al menos 3 recomendaciones específicas de Copilot.
 
 ---
 
 ### Escenario 2: Revisión de Código Asistida por Copilot
 
 **Objetivo del escenario:** Analizar fragmentos de código con errores intencionales (bugs lógicos, vulnerabilidades de seguridad y malas prácticas) usando Copilot Chat para obtener un diagnóstico detallado y versiones corregidas.
-
-**Tiempo estimado:** 20 minutos
 
 ---
 
@@ -251,7 +225,7 @@ Responde en español con formato de lista numerada.
 
 1. En Copilot Chat, escribe el siguiente prompt incluyendo el código problemático:
 
-```
+```text
 Actúa como un experto en seguridad y revisión de código PowerShell con conocimiento de CIS Controls y mejores prácticas de scripting.
 Revisa el siguiente script de PowerShell e identifica TODOS los problemas que encuentres, clasificándolos en estas categorías:
 - 🔴 CRÍTICO: Vulnerabilidades de seguridad o errores que causan fallos
@@ -292,33 +266,29 @@ if($users.Count = 0){
 ```
 
 Responde en español con el análisis completo y luego proporciona el script completo corregido.
+
 ```
 
-> **Nota:** El bloque de código del script problemático debe ser pegado directamente en el chat. En la práctica, el triple backtick cierra el bloque de código del prompt; escribe el prompt y el código como un solo mensaje en Copilot Chat.
+> **Nota:** El bloque de código del script problemático debe ser pegado directamente en el chat. En la práctica, las marcas de código cierran el bloque; escribe el prompt y el código como un solo mensaje en Copilot Chat.
 
 2. Revisa el análisis de Copilot. Verifica que haya identificado al menos los siguientes problemas intencionales:
-   - Contraseña en texto plano (`$password = "Admin123!"`)
-   - Uso peligroso de `Invoke-Expression` (riesgo de inyección de código)
-   - Todos los usuarios se agregan al grupo `Administrators` (escalación de privilegios)
-   - Error de asignación en lugar de comparación (`= 0` en lugar de `-eq 0`)
-   - La contraseña no se convierte a `SecureString`
+* Contraseña en texto plano (`$password = "Admin123!"`)
+* Uso peligroso de `Invoke-Expression` (riesgo de inyección de código)
+* Todos los usuarios se agregan al grupo `Administrators` (escalación de privilegios)
+* Error de asignación en lugar de comparación (`= 0` en lugar de `-eq 0`)
+* La contraseña no se convierte a `SecureString`
+
 
 3. Si Copilot no identificó alguno de estos problemas, usa el siguiente follow-up prompt:
 
-```
+```text
 Gracias por el análisis. Noto que no mencionaste [el problema específico que falta]. ¿Puedes revisar específicamente esa línea y explicar el riesgo de seguridad asociado según las mejores prácticas de OWASP o CIS Controls?
+
 ```
 
 4. Copia el análisis completo y el script corregido en tu documento Word bajo **SECCIÓN 2: Revisión de Código**, con la etiqueta `Revisión 2A — PowerShell Gestión de Usuarios`.
 
 **Salida esperada:** Un análisis estructurado con al menos 5 problemas identificados (mínimo 2 críticos de seguridad), explicaciones de impacto y un script corregido que use `ConvertTo-SecureString`, elimine `Invoke-Expression`, use `-eq` para comparación y no asigne automáticamente el rol de Administrador.
-
-**Verificación:**
-- [ ] Copilot identificó la contraseña en texto plano como problema crítico.
-- [ ] El uso de `Invoke-Expression` fue marcado como vulnerabilidad de seguridad.
-- [ ] El error de asignación vs. comparación (`=` vs `-eq`) fue detectado.
-- [ ] El script corregido usa `ConvertTo-SecureString` para la contraseña.
-- [ ] El análisis está organizado por categorías (Crítico / Advertencia / Sugerencia).
 
 ---
 
@@ -330,7 +300,7 @@ Gracias por el análisis. Noto que no mencionaste [el problema específico que f
 
 1. En Copilot Chat, escribe el siguiente prompt con el código problemático:
 
-```
+```text
 Actúa como un revisor de código Python senior con experiencia en optimización de rendimiento y buenas prácticas PEP 8.
 Analiza el siguiente script Python que procesa archivos de log de un servidor web. Identifica todos los problemas y clasifícalos igual que antes (🔴 CRÍTICO, 🟡 ADVERTENCIA, 🟢 SUGERENCIA).
 
@@ -338,6 +308,7 @@ Para cada problema, explica: qué está mal, cuál es el impacto en rendimiento 
 
 Script a revisar:
 
+```python
 import os
 import json
 
@@ -375,28 +346,24 @@ def get_critical_errors(log_file):
 logs_dir = '/var/logs'
 for f in os.listdir(logs_dir):
     process_logs(logs_dir + '/' + f)
+```
 
 Al final, proporciona el script completo refactorizado siguiendo PEP 8 y buenas prácticas. Responde en español.
+
 ```
 
 2. Verifica que Copilot haya identificado al menos los siguientes problemas intencionales:
-   - Archivo abierto sin `with` statement (recurso no liberado correctamente)
-   - Código duplicado entre `process_logs` y `get_critical_errors`
-   - Uso de `range(0, len(lines))` en lugar de iterar directamente sobre `lines`
-   - Concatenación de rutas con `+` en lugar de `os.path.join()`
-   - No hay manejo de excepciones para archivos que no existen o no son legibles
-   - El archivo de salida siempre se llama `output.json` (sobreescritura en bucle)
+* Archivo abierto sin `with` statement (recurso no liberado correctamente)
+* Código duplicado entre `process_logs` y `get_critical_errors`
+* Uso de `range(0, len(lines))` en lugar de iterar directamente sobre `lines`
+* Concatenación de rutas con `+` en lugar de `os.path.join()`
+* No hay manejo de excepciones para archivos que no existen o no son legibles
+* El archivo de salida siempre se llama `output.json` (sobreescritura en bucle)
+
 
 3. Copia el análisis y el script refactorizado en tu documento Word bajo **SECCIÓN 2**, con la etiqueta `Revisión 2B — Python Procesamiento de Logs`.
 
 **Salida esperada:** Análisis con al menos 6 problemas identificados y un script refactorizado que use `with open()`, elimine código duplicado con una función auxiliar, use `os.path.join()`, incluya manejo de excepciones y genere archivos de salida con nombres únicos.
-
-**Verificación:**
-- [ ] El problema del archivo no cerrado (`open()` sin `with`) fue identificado.
-- [ ] La duplicación de código fue detectada como problema de mantenibilidad.
-- [ ] El script refactorizado usa `with open(...) as f:` en todos los accesos a archivos.
-- [ ] Se usa `os.path.join()` para construir rutas.
-- [ ] El script refactorizado incluye al menos un bloque `try/except`.
 
 ---
 
@@ -408,7 +375,7 @@ Al final, proporciona el script completo refactorizado siguiendo PEP 8 y buenas 
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Basándote en las dos revisiones de código que realizamos en esta sesión (el script PowerShell de gestión de usuarios y el script Python de procesamiento de logs), genera un resumen ejecutivo de revisión de código con el siguiente formato:
 
 ## Resumen Ejecutivo — Revisión de Código
@@ -434,23 +401,16 @@ Basándote en las dos revisiones de código que realizamos en esta sesión (el s
 [Lista de 3 acciones para el equipo de desarrollo]
 
 Responde en español con formato Markdown limpio.
+
 ```
 
 2. Copia el resumen ejecutivo en tu documento Word bajo **SECCIÓN 2**, con la etiqueta `Resumen 2C — Resumen Ejecutivo de Revisión de Código`.
-
-**Verificación:**
-- [ ] El resumen incluye estadísticas numéricas de problemas encontrados.
-- [ ] Hay al menos 3 hallazgos críticos listados.
-- [ ] Las recomendaciones son concretas y accionables.
-- [ ] El formato está en Markdown estructurado.
 
 ---
 
 ### Escenario 3: Documentación Técnica Automatizada
 
 **Objetivo del escenario:** Usar Copilot Chat para generar documentación técnica completa y profesional a partir de los scripts creados en el Escenario 1, produciendo artefactos listos para un repositorio corporativo.
-
-**Tiempo estimado:** 20 minutos
 
 ---
 
@@ -462,7 +422,7 @@ Responde en español con formato Markdown limpio.
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Actúa como un technical writer especializado en documentación de scripts de automatización de IT.
 Basándote en el script PowerShell de verificación de servicios que generamos anteriormente (que incluye la función Get-ServiceStatus, parámetro -OutputPath, manejo de errores y generación de reporte en .txt), genera un archivo README.md completo y profesional con las siguientes secciones:
 
@@ -502,26 +462,20 @@ Basándote en el script PowerShell de verificación de servicios que generamos a
 [Sección genérica con placeholders]
 
 Genera el README completo en formato Markdown. Responde en español para todo el contenido.
+
 ```
 
 2. Revisa el README generado. Verifica que todas las secciones solicitadas estén presentes y que los ejemplos de uso sean coherentes con el script generado.
-
 3. Si falta alguna sección, usa un follow-up prompt específico:
 
-```
+```text
 El README está casi completo. Por favor, agrega la sección de 'Manejo de Errores' con una tabla que incluya al menos 4 errores comunes (como servicio no encontrado, permisos insuficientes, ruta de salida inválida y timeout de consulta) con su causa probable y pasos de resolución.
+
 ```
 
 4. Copia el README completo en tu documento Word bajo **SECCIÓN 3: Documentación Técnica**, con la etiqueta `Doc 3A — README Script PowerShell`.
 
-**Salida esperada:** Un README.md de aproximadamente 150–250 líneas con todas las secciones listadas, tabla de parámetros completa, al menos 3 ejemplos de uso con bloques de código y tabla de manejo de errores.
-
-**Verificación:**
-- [ ] El README tiene todas las secciones solicitadas (mínimo 8 secciones).
-- [ ] La tabla de parámetros incluye nombre, tipo, obligatorio/opcional y descripción.
-- [ ] Hay al menos 3 ejemplos de uso con bloques de código.
-- [ ] La sección de manejo de errores tiene al menos 4 entradas.
-- [ ] El historial de versiones tiene al menos una entrada (v1.0.0).
+**Salida esperada:** Un README.md con todas las secciones listadas, tabla de parámetros completa, al menos 3 ejemplos de uso con bloques de código y tabla de manejo de errores.
 
 ---
 
@@ -533,7 +487,7 @@ El README está casi completo. Por favor, agrega la sección de 'Manejo de Error
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Actúa como un arquitecto de software documentando una herramienta de automatización para el equipo de QA y DevOps.
 Basándote en el script Python de pruebas de conectividad que generamos (con argparse, socket TCP, reporte JSON, logging estructurado y --fail-threshold para pipelines CI/CD), genera los siguientes artefactos de documentación:
 
@@ -556,18 +510,12 @@ Genera una sección de documentación de 300-400 palabras que explique cómo int
 Genera un archivo CSV de ejemplo con 8 entradas ficticias representando diferentes tipos de hosts (servidores web, bases de datos, APIs, servicios de monitoreo).
 
 Responde en español para las explicaciones, código en inglés.
+
 ```
 
 2. Copia los tres artefactos en tu documento Word bajo **SECCIÓN 3**, con la etiqueta `Doc 3B — Especificación Técnica Script Python`.
 
 **Salida esperada:** Tres artefactos distintos: docstrings en Google Style para al menos 3 funciones, una guía de integración CI/CD con ejemplo YAML funcional y un CSV de ejemplo con 8 entradas ficticias.
-
-**Verificación:**
-- [ ] Los docstrings están en formato Google Style (Args, Returns, Raises, Example).
-- [ ] La guía CI/CD incluye un bloque YAML de ejemplo para GitHub Actions.
-- [ ] El YAML de ejemplo incluye manejo del exit code del script.
-- [ ] El CSV de ejemplo tiene columnas `hostname` y `port` con 8 entradas.
-- [ ] La guía menciona diferentes umbrales para dev/staging/prod.
 
 ---
 
@@ -579,7 +527,7 @@ Responde en español para las explicaciones, código en inglés.
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Crea una Guía de Inicio Rápido (Quick Start Guide) para un técnico de IT de nivel intermedio que necesita usar por primera vez los dos scripts que documentamos: el script PowerShell de verificación de servicios y el script Python de pruebas de conectividad.
 
 La guía debe:
@@ -591,23 +539,16 @@ La guía debe:
 - Usar lenguaje directo y sin tecnicismos innecesarios
 
 Formato: Markdown. Idioma: Español.
+
 ```
 
 2. Copia la guía en tu documento Word bajo **SECCIÓN 3**, con la etiqueta `Doc 3C — Quick Start Guide`.
-
-**Verificación:**
-- [ ] La guía cubre ambos scripts.
-- [ ] Hay comandos de ejemplo listos para copiar y pegar.
-- [ ] La tabla de problemas frecuentes tiene al menos 3 entradas por script.
-- [ ] La sección de diagnóstico tiene exactamente 5 pasos.
 
 ---
 
 ### Escenario 4: Apoyo en Procesos de Auditoría Técnica
 
 **Objetivo del escenario:** Simular una auditoría técnica de los scripts de automatización generados, usando Copilot Chat para producir un checklist de buenas prácticas, identificar no conformidades y redactar un reporte ejecutivo de auditoría estructurado.
-
-**Tiempo estimado:** 25 minutos
 
 ---
 
@@ -619,7 +560,7 @@ Formato: Markdown. Idioma: Español.
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Actúa como un auditor técnico de IT especializado en automatización y seguridad de scripts.
 Genera un checklist exhaustivo de auditoría para evaluar scripts de automatización de IT (PowerShell y Python) en un entorno corporativo.
 
@@ -643,19 +584,13 @@ Incluyendo: logging de auditoría, registro de cambios, aprobación de cambios, 
 Para cada ítem del checklist, incluye entre paréntesis la referencia al estándar aplicable cuando sea relevante (ej: CIS Control 3.1, OWASP A02:2021).
 
 Responde en español con formato Markdown.
+
 ```
 
 2. Revisa el checklist. Debe tener un mínimo de 28 ítems distribuidos en las 5 categorías.
-
 3. Copia el checklist en tu documento Word bajo **SECCIÓN 4: Reporte de Auditoría**, con la etiqueta `Auditoría 4A — Checklist de Buenas Prácticas`.
 
-**Salida esperada:** Un checklist estructurado en 5 categorías con al menos 28 ítems en total, referencias a estándares (CIS Controls, OWASP) en los ítems relevantes y formato de checkbox `[ ]`.
-
-**Verificación:**
-- [ ] El checklist tiene las 5 categorías solicitadas.
-- [ ] Hay al menos 28 ítems en total.
-- [ ] Al menos 5 ítems tienen referencias a CIS Controls u OWASP.
-- [ ] Los ítems de seguridad incluyen gestión de credenciales y principio de mínimo privilegio.
+**Salida esperada:** Un checklist de auditoría estructurado en 5 categorías con al menos 28 ítems en total y formato de checkbox `[ ]`.
 
 ---
 
@@ -667,7 +602,7 @@ Responde en español con formato Markdown.
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Ahora simula ser el auditor que aplica el checklist de auditoría que acabamos de crear a los dos scripts que generamos al inicio del laboratorio: el script PowerShell de verificación de servicios y el script Python de pruebas de conectividad.
 
 Para cada script, realiza lo siguiente:
@@ -684,24 +619,19 @@ Al final, incluye una tabla resumen con el porcentaje de cumplimiento por script
 Recuerda que los scripts fueron generados con buenas prácticas, pero pueden tener algunas áreas de mejora. Sé objetivo y realista en la evaluación.
 
 Responde en español.
+
 ```
 
 2. Revisa los resultados. Si el porcentaje de cumplimiento es del 100% para ambos scripts (lo cual sería irreal), usa el siguiente follow-up:
 
-```
+```text
 El resultado parece demasiado optimista. En una auditoría real, incluso scripts bien escritos tienen áreas de mejora. Por favor, revisa más críticamente y considera aspectos como: ¿Los scripts tienen pruebas unitarias automatizadas? ¿Están versionados en un repositorio de control de versiones? ¿Existe un proceso formal de aprobación de cambios documentado? ¿Hay integración con un sistema de gestión de secretos (como Azure Key Vault)?
+
 ```
 
 3. Copia la tabla de evaluación y el resumen de cumplimiento en tu documento Word bajo **SECCIÓN 4**, con la etiqueta `Auditoría 4B — Evaluación de No Conformidades`.
 
-**Salida esperada:** Una tabla de evaluación con al menos 28 filas (una por ítem del checklist), indicadores de estado (✅/❌/N/A), nivel de severidad para no conformidades y una tabla resumen con porcentajes de cumplimiento por categoría (ningún script debería tener 100% de cumplimiento).
-
-**Verificación:**
-- [ ] La tabla de evaluación cubre todos los ítems del checklist generado.
-- [ ] Hay al menos 5 no conformidades identificadas en total entre ambos scripts.
-- [ ] Cada no conformidad tiene nivel de severidad asignado (ALTA/MEDIA/BAJA).
-- [ ] La tabla resumen incluye porcentajes de cumplimiento por categoría.
-- [ ] El cumplimiento global no es 100% para ninguno de los dos scripts.
+**Salida esperada:** Una tabla de evaluación con al menos 28 filas (una por ítem del checklist), indicadores de estado (✅/❌/N/A), nivel de severidad para no conformidades y una tabla resumen con porcentajes de cumplimiento por categoría.
 
 ---
 
@@ -713,7 +643,7 @@ El resultado parece demasiado optimista. En una auditoría real, incluso scripts
 
 1. En Copilot Chat, escribe el siguiente prompt:
 
-```
+```text
 Actúa como un auditor técnico senior redactando el reporte ejecutivo final de la auditoría de scripts de automatización.
 Basándote en el checklist de auditoría y los resultados de evaluación que generamos, redacta un Reporte Ejecutivo de Auditoría Técnica completo con la siguiente estructura:
 
@@ -750,30 +680,23 @@ Basándote en el checklist de auditoría y los resultados de evaluación que gen
 ---
 
 El reporte debe ser formal, profesional y de entre 600-800 palabras de contenido narrativo (excluyendo tablas). Responde en español.
+
 ```
 
 2. Revisa el reporte generado. Verifica que tenga todas las secciones y que el tono sea formal y profesional.
-
 3. Aplica el siguiente prompt de refinamiento final:
 
-```
+```text
 El reporte es muy bueno. Para finalizarlo, por favor:
 1. Agrega en la sección de Recomendaciones de Remediación al menos 2 recomendaciones específicas relacionadas con la integración de estos scripts en un pipeline CI/CD (como las que vimos en la lección sobre automatización del SDLC).
 2. En la sección de Análisis de Riesgo, agrega un riesgo relacionado con la falta de firma de artefactos (como cosign/Sigstore) para los scripts empaquetados.
 3. Agrega una nota al pie que indique que este reporte fue generado con asistencia de Microsoft 365 Copilot y que los hallazgos fueron validados por el equipo auditor.
+
 ```
 
 4. Copia el reporte ejecutivo final en tu documento Word bajo **SECCIÓN 4**, con la etiqueta `Auditoría 4C — Reporte Ejecutivo Final`.
 
-**Salida esperada:** Un reporte ejecutivo de auditoría de 600–800 palabras de contenido narrativo, con 8 secciones completas, tablas de hallazgos, análisis de riesgo con probabilidad/impacto, plan de acción con roadmap por plazos, recomendaciones relacionadas con CI/CD y nota al pie sobre uso de Copilot.
-
-**Verificación:**
-- [ ] El reporte tiene las 8 secciones solicitadas.
-- [ ] La sección de Análisis de Riesgo tiene al menos 4 riesgos con probabilidad e impacto.
-- [ ] Las Recomendaciones incluyen al menos 2 relacionadas con integración CI/CD.
-- [ ] Hay un riesgo relacionado con firma de artefactos (cosign/Sigstore).
-- [ ] El plan de acción tiene los tres horizontes temporales (0-30, 31-90, 91-180 días).
-- [ ] El reporte incluye la nota al pie sobre uso de Copilot.
+**Salida esperada:** Un reporte ejecutivo de auditoría completo con las 8 secciones y tablas detalladas listas para revisión.
 
 ---
 
@@ -785,168 +708,46 @@ El reporte es muy bueno. Para finalizarlo, por favor:
 
 1. Regresa a tu documento Word `Lab02-00-01_Artefactos_[TuNombre].docx`.
 2. Verifica que las 4 secciones estén completas con todos sus artefactos:
-   - SECCIÓN 1: Scripts 1A, 1B y Reflexión 1C
-   - SECCIÓN 2: Revisiones 2A, 2B y Resumen 2C
-   - SECCIÓN 3: Documentos 3A, 3B y 3C
-   - SECCIÓN 4: Auditoría 4A, 4B y 4C
+* SECCIÓN 1: Scripts 1A, 1B y Reflexión 1C
+* SECCIÓN 2: Revisiones 2A, 2B y Resumen 2C
+* SECCIÓN 3: Documentos 3A, 3B y 3C
+* SECCIÓN 4: Auditoría 4A, 4B y 4C
+
+
 3. Aplica formato consistente: usa **Título 1** para secciones, **Título 2** para sub-artefactos y **Normal** para el contenido.
 4. Agrega una **portada** al documento con: título del laboratorio, tu nombre, fecha y el número de artefactos generados.
 5. Guarda el documento en OneDrive (Ctrl+S o File > Save).
 
-**Verificación:**
-- [ ] El documento tiene portada con los datos solicitados.
-- [ ] Las 4 secciones están presentes con todos sus artefactos (mínimo 11 artefactos).
-- [ ] El documento está guardado en OneDrive.
-
 ---
 
-## 7. Validación y Pruebas del Laboratorio
-
-Una vez completados los 4 escenarios, realiza la siguiente validación integral:
-
-### Lista de Verificación Final
-
-| # | Criterio de Validación | Estado |
-|---|---|---|
-| 1 | Script PowerShell generado con función, parámetros y manejo de errores | ⬜ |
-| 2 | Script Python generado con argparse, logging y exit codes para CI/CD | ⬜ |
-| 3 | Reflexión de prompt engineering documentada | ⬜ |
-| 4 | Revisión de código PowerShell con mínimo 5 problemas identificados | ⬜ |
-| 5 | Revisión de código Python con mínimo 6 problemas identificados | ⬜ |
-| 6 | Resumen ejecutivo de revisión de código generado | ⬜ |
-| 7 | README completo del script PowerShell (mínimo 8 secciones) | ⬜ |
-| 8 | Especificación técnica Python con docstrings, YAML CI/CD y CSV de ejemplo | ⬜ |
-| 9 | Quick Start Guide para ambos scripts | ⬜ |
-| 10 | Checklist de auditoría con mínimo 28 ítems en 5 categorías | ⬜ |
-| 11 | Tabla de evaluación de no conformidades con severidades | ⬜ |
-| 12 | Reporte ejecutivo de auditoría con 8 secciones completas | ⬜ |
-| 13 | Documento Word guardado en OneDrive con portada y formato consistente | ⬜ |
-
-### Prompt de Auto-Evaluación Final
-
-Usa este prompt en Copilot Chat para obtener una evaluación de la calidad de tu trabajo:
-
-```
-Actúa como un evaluador de competencias en Microsoft 365 Copilot y prompt engineering.
-He completado un laboratorio de 4 escenarios que incluyó: generación de scripts PowerShell y Python, revisión de código con identificación de vulnerabilidades, generación de documentación técnica (README, docstrings, guía CI/CD) y creación de un reporte de auditoría técnica.
-
-Basándote en las mejores prácticas de prompt engineering y los estándares de documentación técnica, evalúa en una escala del 1 al 5 las siguientes competencias y dame recomendaciones específicas para mejorar:
-
-1. Claridad y especificidad de los prompts utilizados
-2. Uso efectivo de follow-up prompts para refinar resultados
-3. Calidad de los artefactos técnicos generados
-4. Aplicación de estándares de seguridad (OWASP/CIS) en la revisión de código
-5. Completitud y profesionalismo del reporte de auditoría
-
-Para cada competencia, dame: puntuación estimada (1-5), justificación y una acción concreta de mejora.
-Responde en español.
-```
-
-Copia la evaluación de Copilot en tu documento Word como **SECCIÓN 5: Auto-Evaluación**.
-
----
-
-## 8. Solución de Problemas
-
-### Problema 1: Copilot genera código con librerías externas no solicitadas en el script Python
-
-**Síntoma:** El script Python generado importa librerías de terceros como `requests`, `paramiko` o `pandas`, cuando el prompt especificaba usar únicamente la biblioteca estándar de Python.
-
-**Causa:** Copilot tiende a sugerir soluciones más "modernas" o convenientes usando librerías populares, especialmente cuando el prompt no restringe explícitamente este comportamiento. El modelo prioriza la solución técnicamente óptima sobre las restricciones implícitas.
-
-**Solución:**
-1. Usa un follow-up prompt más restrictivo y explícito:
-```
-El script usa librerías externas (como 'requests'). Necesito que lo reescribas usando EXCLUSIVAMENTE la biblioteca estándar de Python 3.10+. No debes importar ningún paquete que no venga incluido por defecto con la instalación de Python. Verifica cada import contra la lista de módulos estándar de Python antes de incluirlo.
-```
-2. Si el problema persiste, inicia una nueva conversación en Copilot Chat y coloca la restricción de librerías estándar como la **primera instrucción** del prompt, antes de describir la funcionalidad.
-3. Al final de cada prompt de código Python, agrega siempre: `"Verifica que todos los imports sean de la biblioteca estándar de Python. Si necesitas funcionalidad de red, usa el módulo socket; si necesitas HTTP, usa urllib."`
-
----
-
-### Problema 2: El reporte de auditoría generado es genérico y no hace referencia a los scripts específicos del laboratorio
-
-**Síntoma:** El reporte ejecutivo de auditoría (Paso 4.3) contiene texto genérico sobre "scripts de automatización" en general, sin mencionar los scripts PowerShell y Python específicos trabajados durante el laboratorio, ni los hallazgos concretos de la evaluación del Paso 4.2.
-
-**Causa:** Copilot Chat no mantiene un contexto perfecto de conversaciones largas. En sesiones extensas (como este laboratorio de 4 escenarios), el modelo puede perder referencias a artefactos generados en pasos anteriores, especialmente si hay muchos intercambios intermedios. Esto es especialmente probable cuando se inicia el Escenario 4 en la misma sesión donde se trabajaron los Escenarios 1, 2 y 3.
-
-**Solución:**
-1. Antes de escribir el prompt del Paso 4.3, usa un prompt de **recontextualización**:
-```
-Antes de redactar el reporte final, quiero asegurarme de que tengas el contexto completo. En este laboratorio trabajamos con:
-- Script PowerShell: verificación de servicios críticos de Windows (wuauserv, WinDefend, EventLog, Spooler, BITS) con función Get-ServiceStatus, parámetro -OutputPath y generación de reporte .txt.
-- Script Python: pruebas de conectividad TCP con argparse, reporte JSON, logging estructurado y --fail-threshold para pipelines CI/CD.
-- Hallazgos de auditoría: [pega aquí un resumen de las 3-5 no conformidades más importantes de la tabla del Paso 4.2].
-Con este contexto, ahora redacta el reporte ejecutivo de auditoría.
-```
-2. Si la sesión de Copilot Chat fue interrumpida, copia los artefactos clave de tu documento Word y pégalos como contexto al inicio del nuevo prompt.
-3. Como práctica general: guarda los artefactos importantes en Word inmediatamente después de generarlos, antes de continuar con el siguiente paso.
-
----
-
-## 9. Limpieza del Entorno
-
-Al finalizar el laboratorio, realiza los siguientes pasos de limpieza:
-
-1. **Guardar el documento final:**
-   - Asegúrate de que `Lab02-00-01_Artefactos_[TuNombre].docx` esté guardado en OneDrive.
-   - Verifica que el documento tenga las 5 secciones completas (incluyendo la auto-evaluación).
-
-2. **Exportar el documento (opcional):**
-   - Si deseas compartir con el instructor: File > Share > Copy Link (asegúrate de que el enlace tenga permisos de "Can View").
-   - Alternativamente: File > Export > Download as PDF para una copia local.
-
-3. **Cerrar la sesión de Copilot Chat:**
-   - El historial de Copilot Chat no se guarda permanentemente. Si deseas conservar algún intercambio específico, cópialo a tu documento Word antes de cerrar.
-   - Cierra la pestaña de `copilot.microsoft.com`.
-
-4. **Organizar archivos locales:**
-   - Si descargaste capturas de pantalla o archivos durante el laboratorio, organízalos en la carpeta `Lab02-00-01` de OneDrive.
-   - Elimina archivos temporales o borradores que no sean parte de los entregables finales.
-
-5. **No se requiere limpieza de infraestructura:**
-   - Este laboratorio no desplegó recursos en la nube ni modificó configuraciones del sistema. No hay recursos que eliminar en Azure, GitHub u otras plataformas.
-
----
-
-## 10. Resumen y Recursos Adicionales
+## 7. Resumen y Recursos Adicionales
 
 ### Puntos Clave del Laboratorio
 
 Este laboratorio demostró cómo **Microsoft 365 Copilot Chat actúa como un coproductor técnico** en cuatro dimensiones del ciclo de desarrollo:
 
 1. **Generación de código:** Copilot puede producir scripts funcionales de calidad profesional cuando se le proporcionan prompts específicos con contexto, restricciones técnicas claras y criterios de calidad explícitos. La técnica de follow-up prompts iterativos es esencial para refinar los resultados del primer intento.
-
 2. **Revisión de código:** Copilot identifica eficazmente vulnerabilidades de seguridad (credenciales en texto plano, `Invoke-Expression`, escalación de privilegios), bugs lógicos (operadores incorrectos) y malas prácticas (recursos no liberados, código duplicado), especialmente cuando se le instruye a clasificar los hallazgos por severidad y referenciar estándares como OWASP y CIS Controls.
-
-3. **Documentación técnica:** La generación de READMEs, docstrings, guías de integración CI/CD y Quick Start Guides con Copilot reduce drásticamente el tiempo de documentación, produciendo artefactos estructurados y coherentes que se alinean con los estándares de docs-as-code vistos en la lección 2.1.
-
+3. **Documentación técnica:** La generación de READMEs, docstrings, guías de integración CI/CD y Quick Start Guides con Copilot reduce drásticamente el tiempo de documentación, produciendo artefactos estructurados y coherentes que se acuerdan con los estándares de docs-as-code vistos en la lección 2.1.
 4. **Auditoría técnica:** Copilot puede actuar como un auditor asistido por IA, generando checklists basados en estándares reconocidos, evaluando código contra esos criterios, identificando no conformidades con severidades y redactando reportes ejecutivos formales, acelerando significativamente el proceso de auditoría.
-
-### Conexión con la Lección 2.1
-
-| Concepto de la Lección 2.1 | Aplicación en este Laboratorio |
-|---|---|
-| Copilot Chat para generación de artefactos de pipeline | Scripts con exit codes para CI/CD (Paso 1.2) |
-| Docs-as-code y documentación automatizada | README, docstrings y guía CI/CD (Escenario 3) |
-| SAST y revisión de seguridad | Identificación de vulnerabilidades OWASP (Escenario 2) |
-| Puertas de calidad en pipelines | `--fail-threshold` y lógica de exit code 1 (Paso 1.2) |
-| Firma de artefactos (cosign/Sigstore) | Riesgo de auditoría por falta de firma (Paso 4.3) |
-| Síntesis de PR y resúmenes de cambios | Resumen ejecutivo de revisión de código (Paso 2.3) |
 
 ### Recursos Adicionales
 
 | Recurso | URL |
-|---|---|
+| --- | --- |
 | Microsoft 365 Copilot — Documentación oficial | [https://learn.microsoft.com/en-us/copilot/microsoft-365/](https://learn.microsoft.com/en-us/copilot/microsoft-365/) |
 | OWASP Top 10 (2021) | [https://owasp.org/Top10/](https://owasp.org/Top10/) |
 | CIS Controls v8 | [https://www.cisecurity.org/controls/v8](https://www.cisecurity.org/controls/v8) |
 | PowerShell Best Practices and Style Guide | [https://poshcode.gitbook.io/powershell-practice-and-style/](https://poshcode.gitbook.io/powershell-practice-and-style/) |
 | PEP 8 — Guía de estilo Python | [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/) |
 | Google Python Style Guide (docstrings) | [https://google.github.io/styleguide/pyguide.html](https://google.github.io/styleguide/pyguide.html) |
-| Sigstore cosign — Firma de artefactos | [https://docs.sigstore.dev/cosign/overview/](https://docs.sigstore.dev/cosign/overview/) |
+| Sigstore cosign — Firma de artefactos | [https://docs.sigstore.dev/quickstart/](https://docs.sigstore.dev/quickstart/) |
 | GitHub Actions — Referencia de workflows | [https://docs.github.com/en/actions](https://docs.github.com/en/actions) |
 
 ---
 
 > 📝 **Nota final para el instructor:** Este laboratorio genera un documento Word como entregable principal. Se recomienda evaluar la calidad de los artefactos usando la rúbrica del curso, prestando especial atención a: (1) la evidencia de uso de prompts iterativos (no solo el resultado final), (2) la coherencia entre los hallazgos de auditoría y el código revisado, y (3) la integración de conceptos CI/CD de la lección 2.1 en los artefactos de documentación. Los participantes deben compartir el enlace de OneDrive al documento como método de entrega.
+
+```
+
+```
