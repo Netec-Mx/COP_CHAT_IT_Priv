@@ -1,5 +1,5 @@
 
-# Generación de scripts, revisión de código, documentación técnica automatizada y apoyo en procesos de auditoría con Copilot.
+# Práctica 2: Generación de scripts, revisión de código, documentación técnica automatizada y apoyo en procesos de auditoría con Copilot.
 
 ## 1. Metadatos
 
