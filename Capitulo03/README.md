@@ -1,4 +1,4 @@
-# Clasificación automática de tickets, priorización inteligente y análisis de causa raíz (RCA) para la prevención de incidentes
+# Práctica 3: Clasificación automática de tickets, priorización inteligente y análisis de causa raíz (RCA) para la prevención de incidentes
 
 ## 1. Metadatos
 
