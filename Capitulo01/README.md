@@ -1,4 +1,4 @@
-# Alcance de proyectos, KPIs de éxito y mejores prácticas en Testing Lifecycle (STLC) asistido por IA para optimización en ambientes complejos.
+# Práctica 1: Alcance de proyectos, KPIs de éxito y mejores prácticas en Testing Lifecycle (STLC) asistido por IA para optimización en ambientes complejos.
 
 ## 1. Metadatos
 
