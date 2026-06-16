@@ -1,4 +1,4 @@
-# Creación de bases de conocimiento Inteligentes, soluciones de autoservicio y gestión de casos típicos de Service Desk con IA
+# Práctica 4: Creación de bases de conocimiento Inteligentes, soluciones de autoservicio y gestión de casos típicos de Service Desk con IA
 
 ## 1. Metadatos
 
